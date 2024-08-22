@@ -1,11 +1,32 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+
+// ใช้ Nuxt Composables
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
+// สร้าง ref สำหรับเก็บภาษาปัจจุบัน
+const currentLanguage = ref('en')
+
+// ฟังก์ชันสำหรับเปลี่ยนภาษา
+const changeLanguage = (lang: string) => {
+  currentLanguage.value = lang
+  // TODO: เพิ่มโค้ดสำหรับเปลี่ยนภาษาของแอพพลิเคชันทั้งหมด (เช่น ใช้ i18n)
+}
+
+// กำหนดรายการภาษาที่รองรับ
+const languages = [
+  { code: 'th', label: 'ไทย' },
+  { code: 'lo', label: 'ລາວ' },
+  { code: 'en', label: 'English' }
+]
+
+// สร้าง computed property สำหรับลิงก์ในเมนู
 const links = computed(() => [{
   label: 'Features',
   to: '#features',
   icon: 'i-heroicons-cube-transparent',
+  // กำหนดสถานะ active ตามการเลื่อนหน้า
   active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
 }, {
   label: 'Pricing',
@@ -24,6 +45,7 @@ const links = computed(() => [{
   active: activeHeadings.value.includes('faq')
 }])
 
+// ใช้ Nuxt hook เพื่ออัพเดท headings เมื่อหน้าเว็บโหลดเสร็จ
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#features'),
@@ -35,40 +57,63 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 </script>
 
 <template>
+  <!-- ใช้ UHeader component จาก Nuxt UI -->
   <UHeader :links="links">
+    <!-- กำหนดโลโก้ -->
     <template #logo>
-      Nuxt UI Pro <UBadge
-        label="Landing"
-        variant="subtle"
-        class="mb-0.5"
-      />
+      <NuxtImg src="/img/logo.png" alt="LAOS INTERNATIONAL" class="h-8" />
     </template>
 
+    <!-- ส่วนด้านขวาของ header สำหรับเลือกภาษา -->
     <template #right>
-      <UButton
-        label="Sign in"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
-        class="hidden lg:flex"
-      />
+      <!-- ใช้ UPopover สำหรับสร้าง dropdown เลือกภาษา -->
+      <UPopover mode="click" :popper="{ placement: 'bottom-end' }">
+        <!-- ปุ่มแสดงภาษาปัจจุบัน -->
+        <UButton
+          color="gray"
+          variant="ghost"
+          :label="languages.find(lang => lang.code === currentLanguage)?.label"
+          trailing-icon="i-heroicons-chevron-down-20-solid"
+        />
+        <!-- เนื้อหาของ popover -->
+        <template #panel>
+          <div class="p-2">
+            <!-- สร้างปุ่มสำหรับแต่ละภาษา -->
+            <UButton
+              v-for="lang in languages"
+              :key="lang.code"
+              :label="lang.label"
+              variant="ghost"
+              color="gray"
+              class="mb-2 w-full text-left"
+              @click="changeLanguage(lang.code)"
+            />
+          </div>
+        </template>
+      </UPopover>
     </template>
 
+    <!-- ส่วนของเมนูด้านข้างสำหรับหน้าจอขนาดเล็ก -->
     <template #panel>
+      <!-- แสดงลิงก์ในเมนูด้านข้าง -->
       <UAsideLinks :links="links" />
 
       <UDivider class="my-6" />
 
+      <!-- ปุ่มเลือกภาษาในเมนูด้านข้าง -->
       <UButton
-        label="Sign in"
-        color="white"
+        v-for="lang in languages"
+        :key="lang.code"
+        :label="lang.label"
+        :color="currentLanguage === lang.code ? 'primary' : 'white'"
         block
         class="mb-3"
-      />
-      <UButton
-        label="Get started"
-        block
+        @click="changeLanguage(lang.code)"
       />
     </template>
   </UHeader>
 </template>
+
+<style scoped>
+/* เพิ่ม CSS เพิ่มเติมตามต้องการ */
+</style>
