@@ -7,11 +7,23 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxtjs/i18n',
     '@nuxt/ui'
   ],
 
+  i18n: {
+    lazy: true,
+    langDir: 'locales',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'th', iso: 'th-TH', file: 'th.json' },
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'lo', iso: 'lo-LO', file: 'lo.json' }
+    ]
+  },
+
   routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
     '/': { prerender: true }
   },
 

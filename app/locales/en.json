@@ -1,0 +1,9 @@
+{
+  "helloWorld": "Hello World",
+  "nav": {
+    "features": "Features",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "faq": "FAQ"
+  }
+}
