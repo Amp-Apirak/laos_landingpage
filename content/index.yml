@@ -1,11 +1,11 @@
-title: Nuxt UI Pro - Landing template
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+title: LAOS LIS INTERNATIONAL
+description: LAOS LIS INTERNATIONAL.
 hero:
-  title: Build your landing in seconds
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+  title: LAOS LIS INTERNATIONAL
+  description: LAOS LIS INTERNATIONAL.
   headline:
-    label: Made with Nuxt UI Pro
-    to: https://ui.nuxt.com/pro
+    label: LOAS LIS
+    to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
     - label: Get started
@@ -29,26 +29,32 @@ logos:
     - i-simple-icons-cloudflare
 features:
   headline: Features
-  title: Why choose our service?
+  title: Select to access the system.
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   items:
-    - title: Easy to use
+    - title: LAOS LIMS
       description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       icon: i-heroicons-cog
-    - title: Reliable
+    - title: LOAS PMS
       description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
+      to: https://pms.pointit.co.th/login
       icon: i-heroicons-check
-    - title: Secure
+    - title: Patient Info
       description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing non anim ullamco.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       icon: i-heroicons-lock-closed
     - title: Fast
       description: Qui reprehenderit nostrud dolore nisi ad fugiat labore eiusmod sint aliquip nisi voluptate.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       icon: i-heroicons-rocket-launch
     - title: Affordable
       description: Reprehenderit fugiat elit in do ipsum ut pariatur.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       icon: i-heroicons-currency-dollar
     - title: Scalable
       description: Lorem deserunt et eiusmod. Ea in consectetur minim officia ullamco enim deserunt est.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       icon: i-heroicons-chart-bar
 pricing:
   headline: Pricing
