@@ -27,12 +27,12 @@ const links = computed(() => [{
   to: '#features',
   icon: 'i-heroicons-cube-transparent',
   // กำหนดสถานะ active ตามการเลื่อนหน้า
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
+  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('about')
 }, {
-  label: 'Pricing',
-  to: '#pricing',
+  label: 'About',
+  to: '#about',
   icon: 'i-heroicons-credit-card',
-  active: activeHeadings.value.includes('pricing') && !activeHeadings.value.includes('testimonials')
+  active: activeHeadings.value.includes('about') && !activeHeadings.value.includes('testimonials')
 }, {
   label: 'Testimonials',
   to: '#testimonials',
@@ -49,7 +49,7 @@ const links = computed(() => [{
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#features'),
-    document.querySelector('#pricing'),
+    document.querySelector('#about'),
     document.querySelector('#testimonials'),
     document.querySelector('#faq')
   ])
@@ -61,7 +61,8 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   <UHeader :links="links">
     <!-- กำหนดโลโก้ -->
     <template #logo>
-      <NuxtImg src="/img/logo.png" alt="LAOS INTERNATIONAL" class="h-8" />
+      <!-- <NuxtImg src="#" alt="LAOS INTERNATIONAL" class="h-8" /> -->
+      LAOS
     </template>
 
     <!-- ส่วนด้านขวาของ header สำหรับเลือกภาษา -->
