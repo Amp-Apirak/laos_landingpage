@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n, useLocalePath } from '#i18n'
 
 // ใช้ Nuxt Composables
-const { locale, t } = useI18n() // ใช้ useI18n จาก vue-i18n
+const { locale, t } = useI18n()
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 const localePath = useLocalePath()
@@ -15,8 +15,16 @@ const currentLanguage = ref(locale.value)
 const changeLanguage = (lang: string) => {
   locale.value = lang
   currentLanguage.value = lang
-  window.location.href = localePath('/')
+  localStorage.setItem('userLocale', lang)
+
+  // ตรวจสอบว่าภาษาเริ่มต้นคือ 'en'
+  const path = lang === 'en' ? '/' : localePath('/')
+  window.location.href = path
 }
+
+const currentLanguageLabel = computed(() =>
+  languages.find(lang => lang.code === currentLanguage.value)?.label || 'Select Language'
+)
 
 watch(locale, (newLocale) => {
   currentLanguage.value = newLocale
@@ -74,7 +82,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         <UButton
           color="gray"
           variant="ghost"
-          :label="languages.find(lang => lang.code === currentLanguage.value)?.label"
+          :label="currentLanguageLabel"
           trailing-icon="i-heroicons-chevron-down-20-solid"
         />
         <template #panel>
