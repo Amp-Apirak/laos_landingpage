@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 // ใช้ Nuxt Composables
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
 // สร้าง ref สำหรับเก็บภาษาปัจจุบัน
-const currentLanguage = ref('en')
+const { locale, t } = useI18n()
+const currentLanguage = ref(locale.value)
 
 // ฟังก์ชันสำหรับเปลี่ยนภาษา
 const changeLanguage = (lang: string) => {
-  currentLanguage.value = lang
-  // TODO: เพิ่มโค้ดสำหรับเปลี่ยนภาษาของแอพพลิเคชันทั้งหมด (เช่น ใช้ i18n)
+  locale.value = lang // ใช้ i18n ในการเปลี่ยนภาษา
 }
 
 // กำหนดรายการภาษาที่รองรับ
@@ -62,7 +63,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
     <!-- กำหนดโลโก้ -->
     <template #logo>
       <!-- <NuxtImg src="#" alt="LAOS INTERNATIONAL" class="h-8" /> -->
-      LAOS
+      LAOS {{ t('welcome') }}
     </template>
 
     <!-- ส่วนด้านขวาของ header สำหรับเลือกภาษา -->
