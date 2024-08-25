@@ -1,19 +1,25 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 // ใช้ Nuxt Composables
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
-// สร้าง ref สำหรับเก็บภาษาปัจจุบัน
+// ใช้ i18n composables
 const { locale, t } = useI18n()
-const currentLanguage = ref(locale.value)
+const currentLanguage = ref(locale.value) // กำหนดค่าเริ่มต้นของภาษาจาก locale
 
 // ฟังก์ชันสำหรับเปลี่ยนภาษา
 const changeLanguage = (lang: string) => {
-  locale.value = lang // ใช้ i18n ในการเปลี่ยนภาษา
+  locale.value = lang
+  currentLanguage.value = lang
 }
+
+// Watch locale เพื่อให้แน่ใจว่า currentLanguage อัปเดตตาม locale
+watch(locale, (newLocale) => {
+  currentLanguage.value = newLocale
+})
 
 // กำหนดรายการภาษาที่รองรับ
 const languages = [
@@ -23,28 +29,37 @@ const languages = [
 ]
 
 // สร้าง computed property สำหรับลิงก์ในเมนู
-const links = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  icon: 'i-heroicons-cube-transparent',
-  // กำหนดสถานะ active ตามการเลื่อนหน้า
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('about')
-}, {
-  label: 'About',
-  to: '#about',
-  icon: 'i-heroicons-credit-card',
-  active: activeHeadings.value.includes('about') && !activeHeadings.value.includes('testimonials')
-}, {
-  label: 'Testimonials',
-  to: '#testimonials',
-  icon: 'i-heroicons-academic-cap',
-  active: activeHeadings.value.includes('testimonials')
-}, {
-  label: 'FAQ',
-  to: '#faq',
-  icon: 'i-heroicons-question-mark-circle',
-  active: activeHeadings.value.includes('faq')
-}])
+const links = computed(() => [
+  {
+    label: t('features'),
+    to: '#features',
+    icon: 'i-heroicons-cube-transparent',
+    active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('about')
+  },
+  {
+    label: t('about'),
+    to: '#about',
+    icon: 'i-heroicons-credit-card',
+    active: activeHeadings.value.includes('about') && !activeHeadings.value.includes('testimonials')
+  },
+  {
+    label: t('testimonials'),
+    to: '#testimonials',
+    icon: 'i-heroicons-academic-cap',
+    active: activeHeadings.value.includes('testimonials')
+  },
+  {
+    label: t('faq'),
+    to: '#faq',
+    icon: 'i-heroicons-question-mark-circle',
+    active: activeHeadings.value.includes('faq')
+  }
+])
+
+// computed property สำหรับแสดงชื่อภาษาปัจจุบัน
+const currentLanguageLabel = computed(() => {
+  return languages.find(lang => lang.code === currentLanguage.value)?.label || 'Select Language'
+})
 
 // ใช้ Nuxt hook เพื่ออัพเดท headings เมื่อหน้าเว็บโหลดเสร็จ
 nuxtApp.hooks.hookOnce('page:finish', () => {
@@ -62,7 +77,6 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   <UHeader :links="links">
     <!-- กำหนดโลโก้ -->
     <template #logo>
-      <!-- <NuxtImg src="#" alt="LAOS INTERNATIONAL" class="h-8" /> -->
       LAOS {{ t('welcome') }}
     </template>
 
@@ -74,7 +88,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         <UButton
           color="gray"
           variant="ghost"
-          :label="languages.find(lang => lang.code === currentLanguage)?.label"
+          :label="currentLanguageLabel"
           trailing-icon="i-heroicons-chevron-down-20-solid"
         />
         <!-- เนื้อหาของ popover -->
@@ -107,7 +121,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         v-for="lang in languages"
         :key="lang.code"
         :label="lang.label"
-        :color="currentLanguage === lang.code ? 'primary' : 'white'"
+        :color="currentLanguage.value === lang.code ? 'primary' : 'white'"
         block
         class="mb-3"
         @click="changeLanguage(lang.code)"

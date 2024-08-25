@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     langDir: '../lang/',
-    strategy: 'prefix'
+    strategy: 'no_prefix'
   },
 
   routeRules: {
