@@ -1,0 +1,179 @@
+title: LAOS LIS INTERNATIONAL
+description: ลาว ลิส อินเตอร์เนชั่นแนล
+hero:
+  title: ลาว ลิส อินเตอร์เนชั่นแนล
+  description: ลาว ลิส อินเตอร์เนชั่นแนล
+  headline:
+    label: ลาว ลิส
+    to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  links:
+    - label: เริ่มต้นใช้งาน
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: '#features'
+      size: xl
+    - label: ใช้เทมเพลตนี้
+      icon: i-simple-icons-github
+      size: xl
+      color: gray
+      to: https://github.com/nuxt-ui-pro/landing
+      target: _blank
+logos:
+  title: เชื่อถือโดยองค์กรชั้นนำทั่วโลก
+  icons:
+    - i-simple-icons-amazonaws
+    - i-simple-icons-heroku
+    - i-simple-icons-netlify
+    - i-simple-icons-vercel
+    - i-simple-icons-cloudflare
+features:
+  headline: คุณสมบัติ
+  title: เลือกเพื่อเข้าถึงระบบ
+  description: ลอเร็ม อิปซัม ดอลอร์ ซิท อเม็ท, คอนเซ็กเตอเตอ อาดิปิซิง เอลิต, เซด โด เอยูซโมด เทมพอร์ อินซิดิเดนท อุต ลาโบเร เอ็ท โดโลเร มากนา อาลิควา.
+  items:
+    - title: ลาว ลิมส์
+      description: อิด ลาบอรัม ลาบอริส ดูอิส นอสตรุด เอกเซปเตอร์ อุต เวลิท นูลลา มากนา ลอเร็ม โปรอิเด็นท นอน.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-cog
+    - title: ลาว พีเอ็มเอส
+      description: มากนา ลอเร็ม เอกซ์ คิลลัม ฟูเกียท อาด เอนิม เอาท์ ไอรูเร ซิท ดูอิส มินิม.
+      to: https://pms.pointit.co.th/login
+      icon: i-heroicons-check
+    - title: ข้อมูลผู้ป่วย
+      description: โปรอิเด็นท นอสตรุด เอกเซปเตอร์ ซิท อุต คัลปา คอนเซ็กเตอเตอ ออเต้ อดิปิซิง นอน แอนิม อุลแลมโค.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-lock-closed
+    - title: เร็ว
+      description: ควิ รีพรีเฮนเดอริท นอสตรุด โดโลเร นิซิ อาด ฟูเกียท ลาโบเร เอยูซโมด ซินท์ อาลิควิป นิซิ โวลุปตาเต.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-rocket-launch
+    - title: ราคาประหยัด
+      description: รีพรีเฮนเดอริท ฟูเกียท เอลิท อิน โด อิปซัม อุต ปาริอาทูร์.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-currency-dollar
+    - title: ขยายได้
+      description: ลอเร็ม เดสเซอร์ท เอต เอยูซโมด. เออ อิน คอนเซ็กเตอเตอ มินิม ออฟฟิเซีย อุลแลมโค เอนิม เดสเซอร์ท เอสท์.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-chart-bar
+pricing:
+  headline: ราคา
+  title: แผนสำหรับทุกความต้องการ
+  description: ปาริอาทูร์ ลาบอรัม โดโลร เออ คอมโมโด ซิท เออเต้ อาลิควิป ควี เอท ซิลลัม เอกเซปเตอร์.
+  plans:
+    - title: พื้นฐาน
+      description: แผนพื้นฐานสำหรับบุคคลทั่วไป.
+      price: ฿299
+      align: top
+      button:
+        label: เริ่มต้นใช้งาน
+        color: gray
+      features:
+        - 1 GB พื้นที่จัดเก็บ
+        - 1 บัญชีอีเมล
+        - 1 โดเมน
+        - 1 เว็บไซต์
+        - 1 ฐานข้อมูล
+        - 1 ใบรับรอง SSL
+        - 1 การสนับสนุนลูกค้า
+    - title: มาตรฐาน
+      description: แผนมาตรฐานสำหรับทีมเล็ก.
+      price: ฿599
+      highlight: true
+      scale: true
+      align: top
+      button:
+        label: เริ่มต้นใช้งาน
+      features:
+        - 10 GB พื้นที่จัดเก็บ
+        - 10 บัญชีอีเมล
+        - 10 โดเมน
+        - 10 เว็บไซต์
+        - 10 ฐานข้อมูล
+        - 10 ใบรับรอง SSL
+        - 10 การสนับสนุนลูกค้า
+    - title: พรีเมียม
+      description: แผนพรีเมียมสำหรับทีมใหญ่.
+      price: ฿899
+      align: top
+      button:
+        label: เริ่มต้นใช้งาน
+        color: gray
+      features:
+        - 100 GB พื้นที่จัดเก็บ
+        - 100 บัญชีอีเมล
+        - 100 โดเมน
+        - 100 เว็บไซต์
+        - 100 ฐานข้อมูล
+        - 100 ใบรับรอง SSL
+        - 100 การสนับสนุนลูกค้า
+testimonials:
+  headline: คำรับรอง
+  title: สิ่งที่ลูกค้าของเราพูดถึง
+  description: โปรอิเด็นท์ ซันท์ เออเซอร์คิเตชั่น มินิม ลาบอรัม เอนิม ลาบอริส ลาบอเร เอสท์.
+  items:
+    - quote: นอสตรุด เทมพอร์ ซันท์ ฟูเกียท. โดโลร อิน ซิท โดโลเร ลาบอเร นอน ออคคาเอแคท อดิปิซิง ลอเร็ม ลาบอเร อุลแลมโค เอนิม เอกเซปเตอร์. อิน ฟูเกียท ลอเร็ม ซิท เวลิท อิด เวเนียม เอสท์ เอยูซโมด นอน เออ โวลุปตาเต คิวปิดาตัต รีพรีเฮนเดอริท อุลแลมโค โดโลเร. โมลลิท ลาบอรัม ออคคาเอแคท อาลิควิป.
+      author:
+        name: โรส โรเบอร์สัน
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+          loading: lazy
+    - quote: เอยูซโมด โดโลร เออเต้ อุต นูลลา ปาริอาทูร์ ออฟฟิเซีย ควอเอท เอเม็ท เอกเซอร์คิเตชั่น.
+      author:
+        name: เชส รอดเจอร์ส
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+          loading: lazy
+    - quote: อิด ดูอิส เวลิท เอนิม ออฟฟิเซีย อาด นิซิ อินซิดิแดนท์ มากนา เอกซ์ โดโลร มินิม เดสเซอร์ท โดโลร. เอสท์ อินซิดิแดนท์ ซิลลัม นอสตรุด เอสท์ ดู ควิส เอเม็ท ลาบอเร เอเม็ท นูลลา เอยูซโมด เอเม็ท นูลลา ลอเร็ม. อินซิดิแดนท์ เอกซ์ โวลุปตาเต อิรุเร ออฟฟิเซีย ลาบอริส เออเต้ ปรอิเด็นท์ เอสท์ ควี.
+      author:
+        name: คอร์เนลิอัส เชพพาร์ด
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+          loading: lazy
+    - quote: เวลิท คอนเซ็กเตอเตอ อิน อดิปิซิง คัลปา เอยูซโมด คอมโมโด เออ เอ็กซ์ โดโลเร. ออฟฟิเซีย อิรุเร นิซิ โดโลร โดโลเร เวลิท ฟูเกียท. อาลิควา ซินท์ อาลิควา เออเต้ เอลิท เออ ซันท์.
+      author:
+        name: เดสทีนี วูดส์
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=5
+          loading: lazy
+    - quote: โปรอิเด็นท์ ควอเอท เดสเซอร์ท ควี เอกเซอร์คิเตชั่น เวเนียม ไอดี ลอเร็ม เอสท์ คิวปิดาตัต อิปซัม อิรุเร อาลิควิป อาด.
+      author:
+        name: คาลเลบ แมคคอร์มิก
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=8
+          loading: lazy
+    - quote: มากนา ออฟฟิเซีย ควอเอท เออ เออ อิน ออฟฟิเซีย นอน โวลุปตาเต อิปซัม คัลปา โด โลเร ซันท์. ออเต้ เอสท์ โดโลเร คอมโมโด ซินท์ ออฟฟิเซีย อาด ลาบอริส โดโลร มากนา อาลิควิป เอกเซอร์คิเตชั่น เทมพอร์ คอมโมโด.
+      author:
+        name: จาซมิน แมคคอล
+        description: CEO ที่ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=9
+          loading: lazy
+cta:
+  title: เริ่มต้นใช้งานวันนี้
+  description: นิซิ โมลลิท ไอดี อาลิควิป ซันท์ เอสท์ ลาบอรัม ซิท ซิท.
+  links:
+    - label: สมัครใช้งานฟรี
+      size: xl
+faq:
+  title: คำถามที่พบบ่อย
+  description: คัลปา คอนเซ็กเตอเตอ โดโลร ปาริอาทูร์ คอมโมโด อาลิควา เอเม็ท เทมพอร์ นิซิ เอนิม เดสเซอร์ท เอลิท ซิลลัม.
+  items:
+    - label: บริการนี้ปลอดภัยหรือไม่?
+      content: ควี ซันท์ นอสตรุด อาลิควิป รีพรีเฮนเดอริท เออเนียม ปรอิเด็นท์ เวเนียม มากนา อาลิควิป เวลิท ออคคาเอแคท เอยูซโมด นิซิ เดสเซอร์ท ซันท์.
+      defaultOpen: true
+    - label: ฉันสามารถยกเลิกการสมัครได้อย่างไร?
+      content: คอนเซ็กเตอเตอ อิรุเร ลอเร็ม นอสตรุด อดิปิซิง อาลิควา โมลลิท ลอเร็ม ซิท ออฟฟิเซีย มากนา เอยูซโมด คิวปิดาตัต.
+    - label: ทดลองใช้งานฟรีทำงานอย่างไร?
+      content: ควีส ออฟฟิเซีย คอมโมโด มากนา เออ ควี อาลิควิป ดูอิส.
+    - label: ฉันสามารถเปลี่ยนแผนได้ในภายหลังหรือไม่?
+      content: โดโลเร อิรุเร อุลแลมโค โดโลเร เออ ออคคาเอแคท มากนา เอยูซโมด โดโลร อาลิควา คัลปา ลาบอเร.
+    - label: มีการคืนเงินหรือไม่?
+      content: ดูอิส โมลลิท นอสตรุด โวลุปตาเต โมลลิท ลอเร็ม โดโลเร คอมโมโด เวเนียม อินซิดิแดนท์ เอยูซโมด.
+    - label: มีการสนับสนุนหรือไม่?
+      content: อาลิควา ซิท นิซิ คอนเซ็กเตอเตอ ปาริอาทูร์ ลอเร็ม มินิม อิรุเร ควี.

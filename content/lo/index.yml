@@ -1,0 +1,179 @@
+title: ລາວ LIS ນາຊະຫດູລະບັດ
+description: ລາວ LIS ນາຊະຫດູລະບັດ
+hero:
+  title: ລາວ LIS ນາຊະຫດູລະບັດ
+  description: ລາວ LIS ນາຊະຫດູລະບັດ
+  headline:
+    label: ລາວ LIS
+    to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  links:
+    - label: ຕື່ມຂໍ້ມູນ
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: "#features"
+      size: xl
+    - label: ໃຊ້ເທມເພລດນີ້
+      icon: i-simple-icons-github
+      size: xl
+      color: gray
+      to: https://github.com/nuxt-ui-pro/landing
+      target: _blank
+logos:
+  title: ໄວ້ໃຈໂດຍບໍລິສັດທີ່ມີຊື່ສຽງທົ່ວໂລກ
+  icons:
+    - i-simple-icons-amazonaws
+    - i-simple-icons-heroku
+    - i-simple-icons-netlify
+    - i-simple-icons-vercel
+    - i-simple-icons-cloudflare
+features:
+  headline: ຄຸນລັກສະນະ
+  title: ເລືອກເພື່ອເຂົ້າເຖິງລະບົບ
+  description: ລອເຣມ ອິບຊັມ ດອເລໍ ຊິດ ເອເມັດ, ຄອນເຊັກເຕີເຕີ ອິດອິບິຊັງ ເອລິດ, ເຊດ ໂດ ເອຍູຊໂມດ ເທມໂປຣ ອິນຊີດິເດນ ອຸດ ລາໂບເຣ ເອັດ ໂດເລໍ ມາກນາ ອາລິຄວາ.
+  items:
+    - title: ລາວ LIMS
+      description: ອິດ ລາໂບເຣ ລາໂບຣິສ ດູອີສ ໂນດສຕຣູດ ເອກເຊປເຕີ ອຸດ ເວລິດ ນູລາ ມາກນາ ລອເຣມ ໂພໄຣເດນ ນອນ.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-cog
+    - title: ລາວ PMS
+      description: ມາກນາ ລອເຣມ ເອັກຊິເລມ ຟູກອຽດ ເອດ ເອນີມ ເອິທ ໄອຣິຣ ຊິດ ດູອີສ ມິນິມ.
+      to: https://pms.pointit.co.th/login
+      icon: i-heroicons-check
+    - title: ຂໍ້ມູນຜູ້ໃຊ້
+      description: ໂພໄຣເດນ ໂນດສຕຣູດ ເອກເຊປເຕີ ຊິດ ເອດ ຄວລີບ ຄອນເຊັກເຕີເຕີ ອອເຕ້ ອິດອິບິຊັງ ນອນ ແອນິມ ອຸລິຄອ.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-lock-closed
+    - title: ວີໄວ
+      description: ຄີ ຣີພິເຮນເດຣິດ ໂນດສຕຣູດ ໂດໂລເຣ ນີຊິ ເອດ ຟູກອຽດ ລາໂບເຣ ເອຍູຊໂມດ ຊິເທ່ ອາລິຄິບ ນີຊິ ໂວລັບແທ.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-rocket-launch
+    - title: ລາຄາບໍ່ແພງ
+      description: ຣີພິເຮນເດຣິດ ຟູກອຽດ ເອລິທ ອິນ ໂດ ອິບຊັມ ອຸດ ປາລິອາທູ.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-currency-dollar
+    - title: ເພີ່ມຕື່ມ
+      description: ລອເຣມ ດີຊເຊີເທີ ເອອຍູຊໂມດ. ເອອິນ ຄອນເຊັກເຕີເຕີ ມິນິມ ອອຟຟິເຊຍ ອຸລລາມຄອ ເອິນິນ ເດສຊເຊີດ ເອສ.
+      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: i-heroicons-chart-bar
+pricing:
+  headline: ລາຄາ
+  title: ແຜນທີ່ເຫມາະສົມກັບຄວາມຕ້ອງການທຸກປະເພດ
+  description: ປາລິອາທູ ລາໂບເຣ ໂດໂລເຣ ເອອຄອມໂມໂດ ຊິດ ເອອເທ ອາລິຄິບ ຄິ ເອັດ ຊີເອັລລາມ ເອກເຊປເຕີ.
+  plans:
+    - title: ພື້ນຖານ
+      description: ແຜນພື້ນຖານສຳລັບບຸກຄົນທົ່ວໄປ.
+      price: ກີບ100,000
+      align: top
+      button:
+        label: ຕື່ມຂໍ້ມູນ
+        color: gray
+      features:
+        - 1 GB ພື້ນທີ່ຈັດເກັບ
+        - 1 ບັນຊີອີເມລ
+        - 1 ໂດເມນ
+        - 1 ເວັບໄຊດ໌
+        - 1 ຖານຂໍ້ມູນ
+        - 1 ໃບຮັບຮອງ SSL
+        - 1 ການສະໜັບສະໜູນ
+    - title: ມາດຕາຖານ
+      description: ແຜນມາດຕາຖານສຳລັບທີມເລັກ.
+      price: ກີບ200,000
+      highlight: true
+      scale: true
+      align: top
+      button:
+        label: ຕື່ມຂໍ້ມູນ
+      features:
+        - 10 GB ພື້ນທີ່ຈັດເກັບ
+        - 10 ບັນຊີອີເມລ
+        - 10 ໂດເມນ
+        - 10 ເວັບໄຊດ໌
+        - 10 ຖານຂໍ້ມູນ
+        - 10 ໃບຮັບຮອງ SSL
+        - 10 ການສະໜັບສະໜູນ
+    - title: ພຣີເມຍມ
+      description: ແຜນພຣີເມຍມສຳລັບທີມໃຫຍ່.
+      price: ກີບ300,000
+      align: top
+      button:
+        label: ຕື່ມຂໍ້ມູນ
+        color: gray
+      features:
+        - 100 GB ພື້ນທີ່ຈັດເກັບ
+        - 100 ບັນຊີອີເມລ
+        - 100 ໂດເມນ
+        - 100 ເວັບໄຊດ໌
+        - 100 ຖານຂໍ້ມູນ
+        - 100 ໃບຮັບຮອງ SSL
+        - 100 ການສະໜັບສະໜູນ
+testimonials:
+  headline: ຄຳຢັນຢືນ
+  title: ສິ່ງທີ່ລູກຄ້າຂອງເຮົາພູດເຖິງ
+  description: ໂພໄຣເດນ ສັນຕ໌ ເອຍູຊໂຊກິເຊີມັນອິນິມ ລາໂບເຣ ເອນິມ ລາບອລິສ ລາໂບເຣ ເອັດອິດ ເອສ.
+  items:
+    - quote: ນອສທຣຸດ ເທມໂພຣ ສັນຕ໌ ຟູກອຽດ. ໂດໂລເຣ ອິນ ຊິດ ໂດໂລເຣ ລາໂບເຣ ນອນ ໂອຄັກເຄຍັດ ອິດອິບຊັງ ລາໂບເຣ ອຸລລາມຄອ ເອະອີມ ອັກເຊປເຕີ. ເອິນ ຟູກອຽດ ລາໂບເຣ ຊິດ ເວລິດ ເອສເອ ເອຍູຊໂມດ ນອນ ເອ ໂວລັບແທ ຄິວປິດາທັດ ຣີພິເຮນເດຣິດ ອຸລລາມຄອ ເອິບລາໂບເຣ ໂອຄັກເຄຍັດ ອາລິຄິບ.
+      author:
+        name: ໂຣສ ໂຣເບີຣສັນ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+          loading: lazy
+    - quote: ເອຍູຊໂມດ ໂດໂລເຣ ເອະອີມ ອຸດ ນູລາ ປາລິອາທູຣ ອອຟຟິເຊັຍ ຄິວອເອັມອີທ ເອັກເຊີກຊິເຊີມັນ.
+      author:
+        name: ສາມ ຮອດເຈີດສິງ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+          loading: lazy
+    - quote: ອິດ ດູອີສ ເວລິດ ເອະອີມ ອິດອິບິຊັງ ອາດ ນີຊິ ອິນຊີດິເດນ ມາກນາ ເອກຊິຊິເດນ ເດເລເວ ເອັກເຊະຕັດເຊີ ເອັກເຊະຕັດ ເອຍູຊໂມດ ລາໂບເຣ ເອມສເອ. ເອຍູຊໂມດ ເອັກເຊະບັກ ອິຣະອີ ອອຟຟິເຊັຍ ລາໂບເຣ ອິດອິດເອັກເຊະເຕີ.
+      author:
+        name: ເຄເນເລຍສ ຊີບພາລດສິດ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+          loading: lazy
+    - quote: ເວລິດ ຄອນເຊັກເຕີເຕີ ເອຍູຊໂມດ ຄິວອເອັມອີທ ໂອດຄອມໂດ ເອ ເອັກຊເຊະເອອອອບລາ ເອເກອເອີ ອອບລາຍເຊັດ ເອອເກອເອີ ເອຊອເວດເມ. ອາລິຄິບ ເອອຄອເມ ເອັກເຊະສເອອອອບລາ.
+      author:
+        name: ເດສທີນິວ ວູດສິດ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=5
+          loading: lazy
+    - quote: ໂພໄຣເດນ ຄິວອເອັມອີທ ເດສເຊີດ ຄິວີ ເອຍູຊໂມດ ເວເອຍູເຊີແຊກຊອນ ເອີຍານີ ລອງລາໂບເຣ ອິບຊັງ ໂວລັບແທ ຄິວປິດາທັດ ອິຣະອີ ເອຍູຊໂມດ ເອມສເອ. ເອັກເຊະບັກ ອິຣະອີ ເອັກເຊະເປີບ ເອອເປີກ ເອອເອຊອເອກເຊີແຊກຊອນ ເອິລູລາມຄອ.
+      author:
+        name: ຄາເລບ ມາຄຄອລມິກສິດ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=8
+          loading: lazy
+    - quote: ມາກນາ ອອຟຟິເຊັຍ ຄວອເອັມອີ ເອອເອ ເອອອອບລາມຄອ ເອເກອເອີ ເອອອອບລາ. ອອເຕ ເອສເອ ໂດໂລເຣ ຄອມໂດ ຊິງເອອເມເອີອອຟຟິເຊັຍ ເອອອອບລາວອອຟຟິເຊັຍ ເອເສເອ ເອອເມເອີອອອອບລາ.
+      author:
+        name: ຈາສມິນ ມັກຄອນລິວ
+        description: CEO ຢູ່ Company
+        avatar:
+          src: https://i.pravatar.cc/120?img=9
+          loading: lazy
+cta:
+  title: ຕື່ມຂໍ້ມູນມື້ນີ້
+  description: ນິຊິ ມອລິຕ ອິດ ອາລິຄິບ ອູນ ເອສອາ ລາໂບເຣ ຊິດ ອູນ.
+  links:
+    - label: ລົງທະບຽນຟຣີ
+      size: xl
+faq:
+  title: ຄຳຖາມທີ່ພົບເວົາໆ
+  description: ຄວອເອັມອີ ໂດໂລເຣ ປາລິອາທູຣ ຄອມໂມໂດ ອາລິຄິບ ອາມັດ ເອີເມ ດີເສເຊີດ ເອລິທ ເອດອິກ ເອລິທ ເອອອອບລາ.
+  items:
+    - label: ການບໍລິການນີ້ປອດໄພບໍ?
+      content: ຄວອເອັມອີ ຊິນໂຕ ໂພໄຣເດນ ຣີພິເຮນເດຣິດ ອິດອິບຊັງ ປະມູຄິດຕະດີກເດເບເຊີເດຍ ລາໂບເຣ ອຸລລາມຄອ ເອດອັກເຊມອັດ ຄິວປິດາທັດ.
+      defaultOpen: true
+    - label: ຂ້ອຍຈະຍົກເລີກການລົງທະບຽນຢ່າງໃດ?
+      content: ຄອນເຊັກເຕີເຕີ ອິຣະອີ ລາໂບເຣ ໂດໂລເຣ ອິດອິບຊັງ ອາລິຄິບ ໂຄລິຊິເຊີທີເຕີ.
+    - label: ການທົດລອງພິເສດເຮັດວຽກແນວໃດ?
+      content: ຄວອເອັມອີ ຄອມໂມໂດ ມາກນາ ອິບຊັມ ເອອອອບລາຍເຊີ.
+    - label: ຂ້ອຍສາມາດປ່ຽນແຜນໄດ້ເມື່ອໃດ?
+      content: ໂດໂລເຣ ອິຣະອີ ອຸລລາມຄອ ເອອອອບລາຍເຊີ ມາກນາ ເອຍູຊໂມດ ໂດໂລເຣ ອາລິຄິບ ລາໂບເຣ.
+    - label: ມີການຄືນເງິນບໍ?
+      content: ດູອີສ ມອລິຕ ນອສທຣູດ ໂວລັບແທ ມອລິຕ ລາໂບເຣ ໂດໂລເຣ ຄອມໂດ ວິເນຍມ ເອຍູຊໂມດ ເອຍູຊໂມດ ເອຍູຊໂມດ ລາໂບເຣ ອິບຊັງ ອາລິຄິບ.
+    - label: ມີການສະໜັບສະໜູນບໍ?
+      content: ອາລິຄິບ ຊິດ ນີຊິ ຄອນເຊັກເຕີເຕີ ປາລິອາທູ ລາໂບເຣ ມິນິມ ອິຣະອີ ຄວອເອັມອີ.

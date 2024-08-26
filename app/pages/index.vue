@@ -1,6 +1,11 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+import { useI18n } from 'vue-i18n' // นำเข้า useI18n สำหรับการแปลภาษา
+const { locale, t } = useI18n() // ใช้ locale และ t จาก useI18n
 
+// ใช้ useAsyncData เพื่อดึงข้อมูลเนื้อหาของหน้าโดยอิงจากภาษาที่เลือก
+const { data: page } = await useAsyncData('index', () => queryContent(`${locale.value}/`).findOne())
+
+// ตั้งค่า SEO เมตาโดยใช้ useSeoMeta เพื่อเพิ่มข้อมูล SEO ในหน้าเว็บ
 useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
@@ -11,12 +16,14 @@ useSeoMeta({
 
 <template>
   <div>
+    <!-- ส่วนของ Hero บนหน้าเว็บ -->
     <ULandingHero
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
     >
       <template #headline>
+        <!-- แสดง badge พร้อมลิงก์ภายใน Hero ถ้ามี -->
         <UBadge
           v-if="page.hero.headline"
           variant="subtle"
@@ -29,12 +36,8 @@ useSeoMeta({
             class="focus:outline-none"
             tabindex="-1"
           >
-            <span
-              class="absolute inset-0"
-              aria-hidden="true"
-            />
+            <span class="absolute inset-0" aria-hidden="true" />
           </NuxtLink>
-
           {{ page.hero.headline.label }}
 
           <UIcon
@@ -45,12 +48,11 @@ useSeoMeta({
         </UBadge>
       </template>
 
+      <!-- ส่วนของรูปภาพ placeholder -->
       <ImagePlaceholder />
 
-      <ULandingLogos
-        :title="page.logos.title"
-        align="center"
-      >
+      <!-- แสดงโลโก้ที่เชื่อถือได้ในหน้าเว็บ -->
+      <ULandingLogos :title="page.logos.title" align="center">
         <UIcon
           v-for="icon in page.logos.icons"
           :key="icon"
@@ -60,6 +62,7 @@ useSeoMeta({
       </ULandingLogos>
     </ULandingHero>
 
+    <!-- ส่วนของ Features บนหน้าเว็บ -->
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
@@ -77,6 +80,7 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
+    <!-- ส่วนของ Pricing บนหน้าเว็บ -->
     <ULandingSection
       :title="page.pricing.title"
       :description="page.pricing.description"
@@ -95,6 +99,7 @@ useSeoMeta({
       </UPricingGrid>
     </ULandingSection>
 
+    <!-- ส่วนของ Testimonials บนหน้าเว็บ -->
     <ULandingSection
       :headline="page.testimonials.headline"
       :title="page.testimonials.title"
@@ -114,13 +119,12 @@ useSeoMeta({
       </UPageColumns>
     </ULandingSection>
 
+    <!-- ส่วนของ CTA (Call to Action) -->
     <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
-      <ULandingCTA
-        v-bind="page.cta"
-        :card="false"
-      />
+      <ULandingCTA v-bind="page.cta" :card="false" />
     </ULandingSection>
 
+    <!-- ส่วนของ FAQ บนหน้าเว็บ -->
     <ULandingSection
       id="faq"
       :title="page.faq.title"
