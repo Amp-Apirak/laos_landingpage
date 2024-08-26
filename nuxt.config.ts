@@ -5,7 +5,6 @@ export default defineNuxtConfig({
 
   // โมดูลที่ใช้ในโปรเจกต์นี้
   modules: [
-<<<<<<< HEAD
     '@nuxt/content', // ใช้สำหรับจัดการเนื้อหาภายใน Nuxt
     '@nuxt/eslint', // ใช้ ESLint เพื่อตรวจสอบโค้ดตามมาตรฐานที่กำหนด
     '@nuxt/fonts', // ใช้จัดการฟอนต์ที่ต้องการในโปรเจกต์
@@ -31,29 +30,6 @@ export default defineNuxtConfig({
   // กฎการกำหนดเส้นทาง
   routeRules: {
     // วิธีแก้ไขชั่วคราวสำหรับปัญหา prerender ดูเพิ่มเติมที่ https://github.com/nuxt/nuxt/issues/27490
-=======
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxtjs/i18n',
-    '@nuxt/ui'
-  ],
-
-  i18n: {
-    lazy: true,
-    langDir: 'locales',
-    strategy: 'prefix_except_default',
-    defaultLocale: 'en',
-    locales: [
-      { code: 'th', iso: 'th-TH', file: 'th.json' },
-      { code: 'en', iso: 'en-US', file: 'en.json' },
-      { code: 'lo', iso: 'lo-LO', file: 'lo.json' }
-    ]
-  },
-
-  routeRules: {
->>>>>>> 5743fdb5cae114b14b135a0cf27caf5b05eb5627
     '/': { prerender: true }
   },
 
