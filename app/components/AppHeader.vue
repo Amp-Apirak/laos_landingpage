@@ -1,42 +1,59 @@
 <script setup lang="ts">
-import { ref, computed, watch, nextTick, onMounted, onUnmounted } from "vue"; // นำเข้า ref, computed, watch, nextTick, onMounted, onUnmounted จาก Vue
-import { useI18n } from "vue-i18n"; // นำเข้า useI18n จาก vue-i18n สำหรับการแปลภาษา
-import { useRouter } from "vue-router"; // นำเข้า useRouter จาก vue-router สำหรับการเปลี่ยนเส้นทาง
+import { ref, computed, watch, onMounted, onUnmounted } from "vue"; // นำเข้า Composition API จาก Vue
+import { useI18n } from "vue-i18n"; // นำเข้า useI18n สำหรับการจัดการการแปลภาษา
+import { useRouter, useRoute } from 'vue-router'; // นำเข้า useRouter และ useRoute สำหรับจัดการเส้นทาง
 
-// ใช้ useI18n เพื่อดึง locale และฟังก์ชันแปล (t)
-const { t, locale } = useI18n();
-
-// ใช้ useRouter เพื่อจัดการเส้นทางของหน้า
-const router = useRouter();
-
-// กำหนดตัวแปร isMobileView เพื่อตรวจสอบว่าขนาดหน้าจอเป็นแบบมือถือหรือไม่
+// กำหนด ref สำหรับตรวจสอบขนาดหน้าจอ
 const isMobileView = ref(false);
 
-// คำนวณภาษาปัจจุบันที่ใช้งานจาก locale
-const currentLanguage = computed(() => locale.value);
+// ฟังก์ชันสำหรับอัพเดทสถานะ mobile view
+const updateMobileView = () => {
+  isMobileView.value = window.innerWidth < 768; // ปรับตามขนาดที่คุณต้องการ
+};
 
-// กำหนดลิงก์ต่าง ๆ ในเมนูตามภาษาที่เลือก
-const links = computed(() => [
-  {
-    label: t("features"),
-    to: "#features",
-    icon: "i-heroicons-cube-transparent",
-  },
-  { 
-    label: t("about"), 
-    to: "#about", 
-    icon: "i-heroicons-credit-card" },
-  {
-    label: t("testimonials"),
-    to: "#testimonials",
-    icon: "i-heroicons-academic-cap",
-  },
-  { 
-    label: t("faq"), 
-    to: "#faq", 
-    icon: "i-heroicons-question-mark-circle" 
-  },
-]);
+// ใช้ lifecycle hooks เพื่อจัดการ event listener เมื่อ component mount และ unmount
+onMounted(() => {
+  updateMobileView();
+  window.addEventListener("resize", updateMobileView);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateMobileView);
+});
+
+// ใช้ Nuxt Composables
+const nuxtApp = useNuxtApp(); // ใช้ useNuxtApp สำหรับเข้าถึง Nuxt application instance
+const { activeHeadings, updateHeadings } = useScrollspy(); // ใช้ useScrollspy สำหรับจัดการ scrollspy ใน Nuxt UI
+
+// ใช้ i18n composables สำหรับจัดการการแปลภาษา
+const router = useRouter();
+const route = useRoute();
+const { locale, locales, t } = useI18n(); // ใช้ useI18n สำหรับจัดการ locale และการแปล
+const currentLanguage = ref(locale.value); // กำหนดค่าเริ่มต้นของภาษาจาก locale
+
+// ฟังก์ชันสำหรับเปลี่ยนภาษา
+const changeLanguage = (lang) => {
+  console.log('Changing language to:', lang); // เพิ่ม console log เพื่อตรวจสอบภาษาใหม่
+  locale.value = lang; // เปลี่ยนค่า locale
+
+  const newPath = router.resolve({ path: `/${lang}` }).href; // กำหนดเส้นทางใหม่ตามภาษาที่เลือก
+  console.log('Navigating to new path:', newPath); // เพิ่ม console log เพื่อตรวจสอบเส้นทางใหม่
+  router.push(newPath); // เปลี่ยนเส้นทางไปยัง URL ใหม่
+};
+
+// Watch locale เพื่อให้แน่ใจว่า currentLanguage อัปเดตตาม locale
+watch(locale, (newLocale) => {
+  currentLanguage.value = newLocale; // อัปเดต currentLanguage เมื่อ locale เปลี่ยนแปลง
+  console.log('Locale changed to:', newLocale); // เพิ่ม console log เพื่อตรวจสอบการเปลี่ยนแปลงของ locale
+
+  // อัปเดตหัวข้อ scrollspy ตามการเปลี่ยนแปลงของภาษา
+  updateHeadings([
+    document.querySelector('#features') ?? undefined,
+    document.querySelector('#about') ?? undefined,
+    document.querySelector('#testimonials') ?? undefined,
+    document.querySelector('#faq') ?? undefined
+  ].filter(Boolean)); // ลบค่า null หรือ undefined ออก
+});
 
 // กำหนดรายการภาษาที่รองรับ
 const languages = [
@@ -45,47 +62,27 @@ const languages = [
   { code: "en", label: "English" },
 ];
 
-// คำนวณชื่อภาษาปัจจุบันสำหรับการแสดงผลใน UI
-const currentLanguageLabel = computed(
-  () =>
-    languages.find((lang) => lang.code === currentLanguage.value)?.label ||
-    "เลือกภาษา"
-);
+// สร้าง computed property สำหรับลิงก์ในเมนู
+const links = computed(() => [
+  { label: t("features"), to: "#features", icon: "i-heroicons-cube-transparent", active: activeHeadings.value.includes("features") && !activeHeadings.value.includes("about") },
+  { label: t("about"), to: "#about", icon: "i-heroicons-credit-card", active: activeHeadings.value.includes("about") && !activeHeadings.value.includes("testimonials") },
+  { label: t("testimonials"), to: "#testimonials", icon: "i-heroicons-academic-cap", active: activeHeadings.value.includes("testimonials") },
+  { label: t("faq"), to: "#faq", icon: "i-heroicons-question-mark-circle", active: activeHeadings.value.includes("faq") },
+]);
 
-// ฟังก์ชันเพื่ออัพเดทสถานะของหน้าจอว่าเป็นแบบมือถือหรือไม่
-const updateMobileView = () => {
-  isMobileView.value = window.innerWidth < 768;
-};
-
-// ฟังก์ชันเปลี่ยนภาษา
-const changeLanguage = async (lang) => {
-  locale.value = lang; // เปลี่ยนค่า locale
-  await router.push(`/${lang}`); // เปลี่ยนเส้นทาง URL เป็นภาษาที่เลือก
-  await nextTick(); // รอการเปลี่ยนแปลง DOM เสร็จสิ้น
-};
-
-// เมื่อคอมโพเนนต์ mount ให้ตรวจสอบขนาดหน้าจอและฟังเหตุการณ์ resize
-onMounted(() => {
-  updateMobileView();
-  window.addEventListener("resize", updateMobileView);
+// computed property สำหรับแสดงชื่อภาษาปัจจุบัน
+const currentLanguageLabel = computed(() => {
+  return languages.find((lang) => lang.code === currentLanguage.value)?.label || "Select Language";
 });
 
-// เมื่อคอมโพเนนต์ unmount ให้ยกเลิกฟังเหตุการณ์ resize
-onUnmounted(() => {
-  window.removeEventListener("resize", updateMobileView);
-});
-
-// เพิ่ม watch เพื่อติดตามการเปลี่ยนแปลงของ locale (ภาษา)
-watch(locale, async (newLocale) => {
-  await nextTick(); // รอการเปลี่ยนแปลง DOM เสร็จสิ้น
-  // ทำการอัปเดตส่วนอื่นๆ ของ UI ที่ต้องเปลี่ยนตามภาษา (ถ้ามี)
-});
 </script>
 
 <template>
   <!-- ส่วนหัวของแอปพลิเคชัน -->
   <UHeader :links="links">
-    <template #logo>LAOS {{ t("welcome") }}</template>
+    <template #logo>
+      LAOS {{ t("welcome") }}
+    </template>
 
     <!-- ส่วนของการเลือกภาษา -->
     <template #right>
@@ -100,10 +97,9 @@ watch(locale, async (newLocale) => {
           :label="currentLanguageLabel"
           trailing-icon="i-heroicons-chevron-down-20-solid"
         />
-
-        <!-- แสดงปุ่มสำหรับเปลี่ยนภาษา -->
         <template #panel>
           <div class="p-2">
+            <!-- สร้างปุ่มสำหรับแต่ละภาษา -->
             <UButton
               v-for="lang in languages"
               :key="lang.code"
@@ -122,7 +118,6 @@ watch(locale, async (newLocale) => {
     <template #panel>
       <UAsideLinks :links="links" />
       <UDivider class="my-6" />
-
       <!-- ปุ่มเปลี่ยนภาษาในเมนูด้านข้าง -->
       <UButton
         v-for="lang in languages"
