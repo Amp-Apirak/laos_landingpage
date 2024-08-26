@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n' // นำเข้า useI18n สำหรับการแปลภาษา
-const { locale, t } = useI18n() // ใช้ locale และ t จาก useI18n
+import { useI18n } from "vue-i18n"; // นำเข้า useI18n สำหรับการแปลภาษา
+const { locale, t } = useI18n(); // ใช้ locale และ t จาก useI18n
 
 // ใช้ useAsyncData เพื่อดึงข้อมูลเนื้อหาของหน้าโดยอิงจากภาษาที่เลือก
-const { data: page } = await useAsyncData('index', () => queryContent(`${locale.value}/`).findOne())
+const { data: page } = await useAsyncData("index", () =>
+  queryContent(`${locale.value}/`).findOne()
+);
 
 // ตั้งค่า SEO เมตาโดยใช้ useSeoMeta เพื่อเพิ่มข้อมูล SEO ในหน้าเว็บ
 useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
-})
+  ogDescription: page.value.description,
+});
 </script>
 
 <template>
@@ -22,34 +24,14 @@ useSeoMeta({
       :description="page.hero.description"
       :links="page.hero.links"
     >
-      <template #headline>
-        <!-- แสดง badge พร้อมลิงก์ภายใน Hero ถ้ามี -->
-        <UBadge
-          v-if="page.hero.headline"
-          variant="subtle"
-          size="lg"
-          class="relative rounded-full font-semibold"
-        >
-          <NuxtLink
-            :to="page.hero.headline.to"
-            target="_blank"
-            class="focus:outline-none"
-            tabindex="-1"
-          >
-            <span class="absolute inset-0" aria-hidden="true" />
-          </NuxtLink>
-          {{ page.hero.headline.label }}
-
-          <UIcon
-            v-if="page.hero.headline.icon"
-            :name="page.hero.headline.icon"
-            class="ml-1 w-4 h-4 pointer-events-none"
-          />
-        </UBadge>
-      </template>
+      <img
+        src="/images/poster.jpg"
+        alt="Hero Image"
+        class="w-full h-auto rounded-lg"
+      />
 
       <!-- ส่วนของรูปภาพ placeholder -->
-      <ImagePlaceholder />
+      <!-- <ImagePlaceholder /> -->
 
       <!-- แสดงโลโก้ที่เชื่อถือได้ในหน้าเว็บ -->
       <ULandingLogos :title="page.logos.title" align="center">
@@ -80,19 +62,19 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
-    <!-- ส่วนของ Pricing บนหน้าเว็บ -->
+    <!-- ส่วนของ About Us บนหน้าเว็บ -->
     <ULandingSection
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-      :headline="page.pricing.headline"
+      :title="page.about.title"
+      :description="page.about.description"
+      :headline="page.about.headline"
     >
       <UPricingGrid
-        id="pricing"
+        id="about"
         compact
         class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
       >
         <UPricingCard
-          v-for="(plan, index) in page.pricing.plans"
+          v-for="(plan, index) in page.about.plans"
           :key="index"
           v-bind="plan"
         />
@@ -120,7 +102,9 @@ useSeoMeta({
     </ULandingSection>
 
     <!-- ส่วนของ CTA (Call to Action) -->
-    <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
+    <ULandingSection
+      class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10"
+    >
       <ULandingCTA v-bind="page.cta" :card="false" />
     </ULandingSection>
 
@@ -138,9 +122,9 @@ useSeoMeta({
           button: {
             label: 'font-semibold',
             trailingIcon: {
-              base: 'w-6 h-6'
-            }
-          }
+              base: 'w-6 h-6',
+            },
+          },
         }"
         class="max-w-4xl mx-auto"
       />

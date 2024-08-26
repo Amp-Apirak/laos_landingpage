@@ -8,17 +8,17 @@ hero:
     to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: Get started
+    - label: Get Started LIS
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: "#features"
       size: xl
-    - label: Use this template
-      icon: i-simple-icons-github
-      size: xl
-      color: gray
-      to: https://github.com/nuxt-ui-pro/landing
-      target: _blank
+    # - label: Use this template
+    #   icon: i-simple-icons-github
+    #   size: xl
+    #   color: gray
+    #   to: https://github.com/nuxt-ui-pro/landing
+    #   target: _blank
 logos:
   title: Trusted by the world's best
   icons:
@@ -35,29 +35,35 @@ features:
     - title: LAOS LIMS
       description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
-      icon: i-heroicons-cog
+      target: _blank
+      icon: i-covid-virus-lab-research-microscope
     - title: LOAS PMS
       description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
       to: https://pms.pointit.co.th/login
-      icon: i-heroicons-check
+      icon: i-covid-covid19-virus-patient-1
+      target: _blank
     - title: Patient Info
       description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing non anim ullamco.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
-      icon: i-heroicons-lock-closed
+      to: http://laoslis.com:888/
+      target: _blank
+      icon: i-medical-icon-inpatient
     - title: Fast
       description: Qui reprehenderit nostrud dolore nisi ad fugiat labore eiusmod sint aliquip nisi voluptate.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
-      icon: i-heroicons-rocket-launch
+      target: _blank
+      icon: i-healthicons-patient-band
     - title: Affordable
       description: Reprehenderit fugiat elit in do ipsum ut pariatur.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
-      icon: i-heroicons-currency-dollar
+      target: _blank
+      icon: i-medical-icon-inpatient
     - title: Scalable
       description: Lorem deserunt et eiusmod. Ea in consectetur minim officia ullamco enim deserunt est.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
-      icon: i-heroicons-chart-bar
-pricing:
-  headline: Pricing
+      target: _blank
+      icon: i-mdi-patient
+about:
+  headline: About Us
   title: A plan for every need
   description: Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum excepteur.
   plans:
