@@ -81,6 +81,20 @@ useSeoMeta({
       </UPricingGrid>
     </ULandingSection>
 
+    <template>
+      <ULandingSection
+        headline="Pro"
+        title="The freedom to build anything"
+        description="Nuxt UI Pro ships with an extensive set of advanced components that cover a wide range of use-cases."
+        align="center"
+      >
+        <img
+          src="https://picsum.photos/640/360"
+          class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
+        />
+      </ULandingSection>
+    </template>
+
     <!-- ส่วนของ Testimonials บนหน้าเว็บ -->
     <ULandingSection
       :headline="page.testimonials.headline"
