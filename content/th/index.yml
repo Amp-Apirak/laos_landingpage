@@ -1,10 +1,10 @@
-title: ลาว LIS อินเตอร์เนชั่นแนล
-description: ลาว LIS อินเตอร์เนชั่นแนล
+title: ลาว LISM อินเตอร์เนชั่นแนล
+description: ศูนย์กลางการรวบรวมข้อมูลทางการแพทย์ที่ใหญ่ที่สุดในประเทศ เชื่อมโยงเครือข่ายข้อมูลขนาดใหญ่ พร้อมระบบจัดเก็บข้อมูลที่มีประสิทธิภาพ รองรับการจัดการผลการตรวจและข้อมูลห้องปฏิบัติการทางการแพทย์อย่างครบวงจร
 hero:
-  title: ลาว LIS อินเตอร์เนชั่นแนล
-  description: ลาว LIS อินเตอร์เนชั่นแนล
+  title: ลาว LISM อินเตอร์เนชั่นแนล
+  description: ศูนย์กลางการรวบรวมข้อมูลทางการแพทย์ที่ใหญ่ที่สุดในประเทศ เชื่อมโยงเครือข่ายข้อมูลขนาดใหญ่ พร้อมระบบจัดเก็บข้อมูลที่มีประสิทธิภาพ รองรับการจัดการผลการตรวจและข้อมูลห้องปฏิบัติการทางการแพทย์อย่างครบวงจร
   headline:
-    label: ลาว LIS
+    label: ลาว LISM
     to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
@@ -177,3 +177,26 @@ faq:
       content: ดูอิส มอลลิต โนสตรุด โวลุปเตท มอลลิต ลอเร็ม โดโลเร คอมโมโด เวเนียม อินซิดิเดนท์ เอียสโมด.
     - label: คุณให้การสนับสนุนหรือไม่?
       content: อาลิควา ซิท นิซี คอนเซคเวียด ปาริอาทูร์ ลอเร็ม มินิม อิรุเร ควี.
+Document:
+  headline: "เอกสาร"
+  title: "เอกสารสำคัญ"
+  description: "เอกสารสำหรับผู้ป่วยและบุคลากรทางการแพทย์"
+  items:
+    - documentName: "แบบฟอร์มลงทะเบียนผู้ป่วย"
+      lastUpdated: "2024-03-15T00:00:00Z"
+      fileType: "PDF"
+      fileSize: "250 KB"
+      downloadUrl: "/documents/patient-registration.pdf"
+      previewUrl: "/preview/patient-registration.pdf"
+    - documentName: "แบบฟอร์มขอประวัติการรักษา"
+      lastUpdated: "2024-03-14T00:00:00Z"
+      fileType: "DOCX"
+      fileSize: "180 KB"
+      downloadUrl: "/documents/medical-history.docx"
+      previewUrl: "/preview/medical-history.pdf"
+    - documentName: "หนังสือให้ความยินยอมการรักษา"
+      lastUpdated: "2024-03-13T00:00:00Z"
+      fileType: "PDF"
+      fileSize: "320 KB"
+      downloadUrl: "/documents/consent.pdf"
+      previewUrl: "/preview/consent.pdf"

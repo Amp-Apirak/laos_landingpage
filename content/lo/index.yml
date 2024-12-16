@@ -1,8 +1,8 @@
 title: ລາວ LIS ນາຊະຫດູລະບັດ
-description: ລາວ LIS ນາຊະຫດູລະບັດ
+description: ສູນກາງຂໍ້ມູນທາງການແພດທີ່ໃຫຍ່ທີ່ສຸດໃນປະເທດ ເຊື່ອມໂຍງຂໍ້ມູນເຄືອຂ່າຍຂະຫນາດໃຫຍ່ ພ້ອມລະບົບເກັບຂໍ້ມູນທີ່ມີປະສິດທິພາບ ສະໜັບສະໜູນການຄຸ້ມຄອງຜົນການກວດ ແລະຂໍ້ມູນຫ້ອງປະຕິບັດການທາງການແພດຢ່າງຄົບວົງຈອນ
 hero:
   title: ລາວ LIS ນາຊະຫດູລະບັດ
-  description: ລາວ LIS ນາຊະຫດູລະບັດ
+  description: ສູນກາງຂໍ້ມູນທາງການແພດທີ່ໃຫຍ່ທີ່ສຸດໃນປະເທດ ເຊື່ອມໂຍງຂໍ້ມູນເຄືອຂ່າຍຂະຫນາດໃຫຍ່ ພ້ອມລະບົບເກັບຂໍ້ມູນທີ່ມີປະສິດທິພາບ ສະໜັບສະໜູນການຄຸ້ມຄອງຜົນການກວດ ແລະຂໍ້ມູນຫ້ອງປະຕິບັດການທາງການແພດຢ່າງຄົບວົງຈອນ
   headline:
     label: ລາວ LIS
     to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
@@ -177,3 +177,26 @@ faq:
       content: ດີເສເຊີດ ມິນິມ ອອຟຟິເຊັຍ ລາໂບເຣ ມິນິມ ລາໂບເຣ ລາໂບເຣ ຄອມໂດ ປາລິອາທູຣ.
     - label: ພວກເຮົາສະໜັບສະໜູນບໍ່?
       content: ອີອີມີ ຊິຄອນທັກ ລາໂບເຣ ອອຟຟິເຊັຍ ເອອເມເອີອອບລາ.
+Document:
+  headline: ເອກະສານ
+  title: ເອກະສານສຳຄັນ
+  description: ເອກະສານສຳລັບຄົນເຈັບ ແລະ ບຸກຄະລາກອນທາງການແພດ
+  items:
+    - documentName: ແບບຟອມລົງທະບຽນຄົນເຈັບ
+      lastUpdated: 2024-03-15
+      fileType: PDF
+      fileSize: 250 KB
+      downloadUrl: /documents/patient-registration.pdf
+      previewUrl: /preview/patient-registration.pdf
+    - documentName: ແບບຟອມຂໍປະຫວັດການປິ່ນປົວ
+      lastUpdated: 2024-03-14
+      fileType: DOCX
+      fileSize: 180 KB
+      downloadUrl: /documents/medical-history.docx
+      previewUrl: /preview/medical-history.pdf
+    - documentName: ໜັງສືໃຫ້ຄວາມຍິນຍອມການປິ່ນປົວ
+      lastUpdated: 2024-03-13
+      fileType: PDF
+      fileSize: 320 KB
+      downloadUrl: /documents/consent.pdf
+      previewUrl: /preview/consent.pdf

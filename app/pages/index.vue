@@ -63,7 +63,7 @@ useSeoMeta({
     </ULandingSection>
 
     <!-- ส่วนของ About Us บนหน้าเว็บ -->
-    <ULandingSection
+    <!-- <ULandingSection
       :title="page.about.title"
       :description="page.about.description"
       :headline="page.about.headline"
@@ -79,7 +79,7 @@ useSeoMeta({
           v-bind="plan"
         />
       </UPricingGrid>
-    </ULandingSection>
+    </ULandingSection> -->
 
     <template>
       <ULandingSection
@@ -115,11 +115,205 @@ useSeoMeta({
       </UPageColumns>
     </ULandingSection>
 
-    <!-- ส่วนของ CTA (Call to Action) -->
+    <!-- ส่วนของ Documents บนหน้าเว็บ -->
     <ULandingSection
-      class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10"
+      id="documents"
+      v-if="page?.Document"
+      :headline="page.Document.headline"
+      :title="page.Document.title"
+      :description="page.Document.description"
+      lass="scroll-mt-[calc(var(--header-height)+140px)]"
     >
-      <ULandingCTA v-bind="page.cta" :card="false" />
+      <!-- Container สำหรับ Document Table -->
+      <div class="w-full max-w-4xl mx-auto">
+        <!-- Wrapper สำหรับทำ Responsive Table with Shadow -->
+        <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+          <!-- Background Container -->
+          <div
+            class="min-w-full bg-white dark:bg-gray-800 border dark:border-gray-700"
+          >
+            <!-- Mobile View (แสดงเฉพาะหน้าจอที่เล็กกว่า lg breakpoint) -->
+            <div class="lg:hidden">
+              <!-- Card สำหรับแต่ละเอกสาร -->
+              <div
+                v-for="doc in page.Document.items"
+                :key="doc.documentName"
+                class="p-4 border-b dark:border-gray-700"
+              >
+                <!-- ส่วนบนของ Card แสดงชื่อเอกสารและวันที่ -->
+                <div class="mb-2">
+                  <!-- ชื่อเอกสาร -->
+                  <div class="font-medium text-gray-900 dark:text-white">
+                    {{ doc.documentName }}
+                  </div>
+                  <!-- วันที่อัปเดต -->
+                  <div class="text-sm text-gray-500">
+                    {{ doc.lastUpdated }}
+                  </div>
+                </div>
+
+                <!-- ส่วนล่างของ Card แสดง File Info และ Actions -->
+                <div class="flex items-center justify-between">
+                  <!-- File Information -->
+                  <div class="flex items-center space-x-4">
+                    <!-- Badge แสดงประเภทไฟล์ -->
+                    <span
+                      class="px-2.5 py-0.5 rounded-full text-xs"
+                      :class="
+                        doc.fileType === 'PDF'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      "
+                    >
+                      {{ doc.fileType }}
+                    </span>
+                    <!-- ขนาดไฟล์ -->
+                    <span class="text-sm text-gray-500">
+                      {{ doc.fileSize }}
+                    </span>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="flex space-x-2">
+                    <!-- Preview Button -->
+                    <UButton
+                      size="sm"
+                      color="gray"
+                      variant="ghost"
+                      icon="i-heroicons-eye"
+                      :to="doc.previewUrl"
+                      target="_blank"
+                      class="!p-1"
+                    >
+                      <span class="sr-only">{{ t("Preview") }}</span>
+                    </UButton>
+                    <!-- Download Button -->
+                    <UButton
+                      size="sm"
+                      color="primary"
+                      variant="solid"
+                      icon="i-heroicons-arrow-down-tray"
+                      :to="doc.downloadUrl"
+                      download
+                      class="!p-1"
+                    >
+                      <span class="sr-only">{{ t("Download") }}</span>
+                    </UButton>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop View (แสดงเฉพาะหน้าจอขนาด lg ขึ้นไป) -->
+            <table
+              class="hidden lg:table min-w-full divide-y divide-gray-200 dark:divide-gray-700"
+            >
+              <!-- Table Header -->
+              <thead>
+                <tr class="bg-gray-50 dark:bg-gray-700">
+                  <!-- Column Headers -->
+                  <th
+                    class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                  >
+                    {{ t("Document Name") }}
+                  </th>
+                  <th
+                    class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                  >
+                    {{ t("Last Updated") }}
+                  </th>
+                  <th
+                    class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                  >
+                    {{ t("File Type") }}
+                  </th>
+                  <th
+                    class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                  >
+                    {{ t("Size") }}
+                  </th>
+                  <th
+                    class="px-4 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                  >
+                    {{ t("Actions") }}
+                  </th>
+                </tr>
+              </thead>
+
+              <!-- Table Body -->
+              <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                <!-- Table Rows -->
+                <tr
+                  v-for="doc in page.Document.items"
+                  :key="doc.documentName"
+                  class="hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  <!-- ชื่อเอกสาร -->
+                  <td
+                    class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    {{ doc.documentName }}
+                  </td>
+                  <!-- วันที่อัปเดต -->
+                  <td
+                    class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300"
+                  >
+                    {{ doc.lastUpdated }}
+                  </td>
+                  <!-- ประเภทไฟล์ -->
+                  <td
+                    class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300"
+                  >
+                    <span
+                      class="px-2.5 py-0.5 rounded-full text-xs"
+                      :class="
+                        doc.fileType === 'PDF'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      "
+                    >
+                      {{ doc.fileType }}
+                    </span>
+                  </td>
+                  <!-- ขนาดไฟล์ -->
+                  <td
+                    class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300"
+                  >
+                    {{ doc.fileSize }}
+                  </td>
+                  <!-- ปุ่มดำเนินการ -->
+                  <td class="px-4 py-3 whitespace-nowrap text-right">
+                    <div class="flex justify-end space-x-2">
+                      <!-- Preview Button -->
+                      <UButton
+                        size="sm"
+                        color="gray"
+                        variant="ghost"
+                        icon="i-heroicons-eye"
+                        :to="doc.previewUrl"
+                        target="_blank"
+                      >
+                        {{ t("Preview") }}
+                      </UButton>
+                      <!-- Download Button -->
+                      <UButton
+                        size="sm"
+                        color="primary"
+                        variant="solid"
+                        icon="i-heroicons-arrow-down-tray"
+                        :to="doc.downloadUrl"
+                        download
+                      >
+                        {{ t("Download") }}
+                      </UButton>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </ULandingSection>
 
     <!-- ส่วนของ FAQ บนหน้าเว็บ -->
