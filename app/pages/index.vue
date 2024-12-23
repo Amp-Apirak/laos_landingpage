@@ -18,37 +18,22 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- ส่วนของ Hero บนหน้าเว็บ -->
+    <!-- ส่วนของ About -->
     <ULandingHero
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
+      id="about"
+      class="mb-0"
     >
-      <img
-        src="/images/poster.jpg"
-        alt="Hero Image"
-        class="w-full h-auto rounded-lg"
-      />
-
-      <!-- ส่วนของรูปภาพ placeholder -->
-      <!-- <ImagePlaceholder /> -->
-
-      <!-- แสดงโลโก้ที่เชื่อถือได้ในหน้าเว็บ -->
-      <ULandingLogos :title="page.logos.title" align="center">
-        <UIcon
-          v-for="icon in page.logos.icons"
-          :key="icon"
-          :name="icon"
-          class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white"
-        />
-      </ULandingLogos>
     </ULandingHero>
 
-    <!-- ส่วนของ Features บนหน้าเว็บ -->
+    <!-- ส่วนของ Features -->
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
       :headline="page.features.headline"
+      class="-mt-32 sm:-mt-40 lg:-mt-48"
     >
       <UPageGrid
         id="features"
@@ -62,60 +47,21 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
-    <!-- ส่วนของ About Us บนหน้าเว็บ -->
-    <!-- <ULandingSection
-      :title="page.about.title"
-      :description="page.about.description"
-      :headline="page.about.headline"
-    >
-      <UPricingGrid
-        id="about"
-        compact
+    <!-- ส่วนของ LOAS URL -->
+    <ULandingSection :title="page.features.title" class="-mt-24 sm:-mt-32 lg:-mt-40" >
+      <UPageGrid
+        id="features"
         class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
       >
-        <UPricingCard
-          v-for="(plan, index) in page.about.plans"
+        <ULandingCard
+          v-for="(item, index) in page.features.items"
           :key="index"
-          v-bind="plan"
+          v-bind="item"
         />
-      </UPricingGrid>
-    </ULandingSection> -->
-
-    <template>
-      <ULandingSection
-        headline="Pro"
-        title="The freedom to build anything"
-        description="Nuxt UI Pro ships with an extensive set of advanced components that cover a wide range of use-cases."
-        align="center"
-      >
-        <img
-          src="https://picsum.photos/640/360"
-          class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
-        />
-      </ULandingSection>
-    </template>
-
-    <!-- ส่วนของ Testimonials บนหน้าเว็บ -->
-    <ULandingSection
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-    >
-      <UPageColumns
-        id="testimonials"
-        class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
-      >
-        <div
-          v-for="(testimonial, index) in page.testimonials.items"
-          :key="index"
-          class="break-inside-avoid"
-        >
-          <ULandingTestimonial v-bind="testimonial" />
-        </div>
-      </UPageColumns>
+      </UPageGrid>
     </ULandingSection>
 
-    <!-- ส่วนของ Documents บนหน้าเว็บ -->
+    <!-- ส่วนของ Documents -->
     <ULandingSection
       id="documents"
       v-if="page?.Document"
@@ -123,6 +69,8 @@ useSeoMeta({
       :title="page.Document.title"
       :description="page.Document.description"
       lass="scroll-mt-[calc(var(--header-height)+140px)]"
+      class="-mt-32 sm:-mt-40 lg:-mt-48"
+      
     >
       <!-- Container สำหรับ Document Table -->
       <div class="w-full max-w-4xl mx-auto">
@@ -316,12 +264,13 @@ useSeoMeta({
       </div>
     </ULandingSection>
 
-    <!-- ส่วนของ FAQ บนหน้าเว็บ -->
+    <!-- ส่วนของ FAQ  -->
     <ULandingSection
       id="faq"
       :title="page.faq.title"
       :description="page.faq.description"
-      class="scroll-mt-[var(--header-height)]"
+      class="-mt-24 sm:-mt-32 lg:-mt-40"
+      
     >
       <ULandingFAQ
         multiple

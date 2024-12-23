@@ -50,7 +50,6 @@ watch(locale, (newLocale) => {
   updateHeadings([
     document.querySelector('#features') ?? undefined,
     document.querySelector('#about') ?? undefined,
-    document.querySelector('#testimonials') ?? undefined,
     document.querySelector('#documents') ?? undefined,
     document.querySelector('#faq') ?? undefined
   ].filter(Boolean)); // ลบค่า null หรือ undefined ออก
@@ -66,8 +65,7 @@ const languages = [
 // สร้าง computed property สำหรับลิงก์ในเมนู
 const links = computed(() => [
   { label: t("features"), to: "#features", icon: "i-heroicons-cube-transparent", active: activeHeadings.value.includes("features") && !activeHeadings.value.includes("about") },
-  { label: t("about"), to: "#about", icon: "i-heroicons-credit-card", active: activeHeadings.value.includes("about") && !activeHeadings.value.includes("testimonials") },
-  { label: t("testimonials"), to: "#testimonials", icon: "i-heroicons-academic-cap", active: activeHeadings.value.includes("testimonials") },
+  { label: t("about"), to: "#about", icon: "i-heroicons-credit-card", active: activeHeadings.value.includes("about") && !activeHeadings.value.includes("deocuments") },
   { label: t("documents"), to: "#documents", icon: "i-heroicons-academic-cap", active: activeHeadings.value.includes("deocuments") },
   { label: t("faq"), to: "#faq", icon: "i-heroicons-question-mark-circle", active: activeHeadings.value.includes("faq") },
 ]);
