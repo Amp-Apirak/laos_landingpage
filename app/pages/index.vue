@@ -7,6 +7,19 @@ const { data: page } = await useAsyncData("index", () =>
   queryContent(`${locale.value}/`).findOne()
 );
 
+// เพิ่ม state สำหรับจัดการการเล่นวิดีโอ
+const playingVideos = ref(new Set());
+
+// เพิ่มฟังก์ชันสำหรับควบคุมการเล่นวิดีโอ
+const toggleVideo = (index: number) => {
+  if (playingVideos.value.has(index)) {
+    playingVideos.value.delete(index);
+  } else {
+    playingVideos.value.add(index);
+  }
+};
+
+
 // ตั้งค่า SEO เมตาโดยใช้ useSeoMeta เพื่อเพิ่มข้อมูล SEO ในหน้าเว็บ
 useSeoMeta({
   title: page.value.title,
@@ -19,13 +32,35 @@ useSeoMeta({
 <template>
   <div>
     <!-- ส่วนของ About -->
-    <ULandingHero
-      :title="page.hero.title"
-      :description="page.hero.description"
-      :links="page.hero.links"
-      id="about"
-      class="mb-0"
-    >
+    <ULandingHero id="about" class="pt-4 md:pt-8 lg:pt-12">
+      <template #title>
+        <div class="text-center">
+          <img
+            src="/images/logo.png"
+            alt="LAOS LIMS Logo"
+            class="mx-auto mb-12 w-48 h-48 md:w-64 md:h-64 lg:w-96 lg:h-96 object-contain"
+          />
+          <h1 class="text-4xl md:text-6xl font-bold">
+            {{ page.hero.title }}
+          </h1>
+        </div>
+      </template>
+
+      <template #description>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+          {{ page.hero.description }}
+        </p>
+      </template>
+
+      <template #links>
+        <div class="mt-8 flex justify-center gap-4">
+          <UButton
+            v-for="link in page.hero.links"
+            :key="link.label"
+            v-bind="link"
+          />
+        </div>
+      </template>
     </ULandingHero>
 
     <!-- ส่วนของ Features -->
@@ -47,14 +82,17 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
-    <!-- ส่วนของ LOAS URL -->
-    <ULandingSection :title="page.features.title" class="-mt-24 sm:-mt-32 lg:-mt-40" >
+    <!-- ส่วนของ Systems URL -->
+    <ULandingSection
+      :title="page.systems.title"
+      class="-mt-24 sm:-mt-32 lg:-mt-40"
+    >
       <UPageGrid
-        id="features"
+        id="systems"
         class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]"
       >
         <ULandingCard
-          v-for="(item, index) in page.features.items"
+          v-for="(item, index) in page.systems.items"
           :key="index"
           v-bind="item"
         />
@@ -70,7 +108,6 @@ useSeoMeta({
       :description="page.Document.description"
       lass="scroll-mt-[calc(var(--header-height)+140px)]"
       class="-mt-32 sm:-mt-40 lg:-mt-48"
-      
     >
       <!-- Container สำหรับ Document Table -->
       <div class="w-full max-w-4xl mx-auto">
@@ -264,13 +301,88 @@ useSeoMeta({
       </div>
     </ULandingSection>
 
+    <!-- ส่วนของ Videos -->
+    <ULandingSection
+      id="videos"
+      v-if="page?.Video"
+      :headline="page.Video.headline"
+      :title="page.Video.title"
+      :description="page.Video.description"
+      class="-mt-32 sm:-mt-40 lg:-mt-48"
+    >
+      <!-- Container for Video Grid -->
+      <div class="w-full max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Video Card Component -->
+          <div
+            v-for="(video, index) in page.Video.items"
+            :key="index"
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+          >
+            <!-- Video Thumbnail Container -->
+            <div class="relative aspect-video w-full">
+              <!-- Thumbnail Image -->
+              <img
+                :src="video.thumbnail"
+                :alt="video.title"
+                class="w-full h-full object-cover"
+              />
+              <!-- Play Button Overlay -->
+              <button
+                @click="video.isPlaying = true"
+                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-50 transition-opacity"
+              >
+                <UIcon
+                  name="i-heroicons-play-circle"
+                  class="w-16 h-16 text-white"
+                />
+              </button>
+              <!-- Video Player (shows when isPlaying is true) -->
+              <div v-if="video.isPlaying" class="absolute inset-0 bg-black">
+                <iframe
+                  :src="video.embedUrl"
+                  class="w-full h-full"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <!-- Close Button -->
+                <button
+                  @click="video.isPlaying = false"
+                  class="absolute top-4 right-4 text-white hover:text-gray-300"
+                >
+                  <UIcon name="i-heroicons-x-mark" class="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+            <!-- Video Info -->
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {{ video.title }}
+              </h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                {{ video.description }}
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  {{ video.duration }}
+                </span>
+                <span class="text-sm text-gray-500">
+                  {{ video.date }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ULandingSection>
+
     <!-- ส่วนของ FAQ  -->
     <ULandingSection
       id="faq"
       :title="page.faq.title"
       :description="page.faq.description"
       class="-mt-24 sm:-mt-32 lg:-mt-40"
-      
     >
       <ULandingFAQ
         multiple
@@ -285,6 +397,50 @@ useSeoMeta({
         }"
         class="max-w-4xl mx-auto"
       />
+    </ULandingSection>
+
+    <!-- ส่วนของ Contact -->
+    <ULandingSection
+      id="contact"
+      :title="page.contact.title"
+      :description="page.contact.description"
+      class="-mt-24 sm:-mt-32 lg:-mt-40"
+    >
+      <div class="w-full max-w-4xl mx-auto">
+        <!-- การ์ดแสดงข้อมูลติดต่อ -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- ข้อมูลการติดต่อ -->
+            <div
+              v-for="(item, index) in page.contact.info"
+              :key="index"
+              class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700"
+            >
+              <!-- ไอคอน -->
+              <div class="flex-shrink-0">
+                <UIcon :name="item.icon" class="w-8 h-8 text-primary-500" />
+              </div>
+
+              <!-- ข้อความและลิงก์ -->
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  {{ item.label }}
+                </p>
+                <a
+                  :href="
+                    item.type === 'email'
+                      ? `mailto:${item.value}`
+                      : `https://wa.me/${item.value.replace(/\D/g, '')}`
+                  "
+                  class="text-lg font-medium text-gray-900 dark:text-white hover:text-primary-500"
+                >
+                  {{ item.value }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </ULandingSection>
   </div>
 </template>

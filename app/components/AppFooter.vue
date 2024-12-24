@@ -90,7 +90,7 @@ function onSubmit() {
 
     <template #left>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
-        Copyright © {{ new Date().getFullYear() }}. All rights reserved.
+        Copyright © Project Management Office Service Co., Ltd. (2025).
       </p>
     </template>
 

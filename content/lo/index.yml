@@ -1,20 +1,26 @@
-title: ລາວ LIS ນາຊະຫດູລະບັດ
-description: ສູນກາງຂໍ້ມູນທາງການແພດທີ່ໃຫຍ່ທີ່ສຸດໃນປະເທດ ເຊື່ອມໂຍງຂໍ້ມູນເຄືອຂ່າຍຂະຫນາດໃຫຍ່ ພ້ອມລະບົບເກັບຂໍ້ມູນທີ່ມີປະສິດທິພາບ ສະໜັບສະໜູນການຄຸ້ມຄອງຜົນການກວດ ແລະຂໍ້ມູນຫ້ອງປະຕິບັດການທາງການແພດຢ່າງຄົບວົງຈອນ
+title: LAOS LISM INTERNATIONAL
+description: ລະບົບຈັດການຂໍ້ມູນຫ້ອງປະດິບັດການ (Laboratory Information Management System - LIMS) ທີ່ເໝາະສົມສຳລັບສປປ ລາວ. LIMS ເປັນລະບົບຊອບແວທີ່ໃຊ້ໃນຫ້ອງປະດິບັດການເພື່ອຈັດການ ຕິດຕາມ ແລະວິເຄາະຂໍ້ມູນແລະຕົວຢ່າງ. ມັກຖືກນຳໃຊ້ໃນອຸດສາຫະກໍາຕ່າງໆ ຢ່າງເຊັ່ນ ຢາ ສຸຂະພາບ ຄວາມປອດໄພທາງອາຫານ ການທົດສອບສິ່ງແວດລ້ອມ ແລະອື່ນໆ. LIMS ຊ່ວຍໃຫ້ການດຳເນີນການຂອງຫ້ອງປະດິບັດການມີຄວາມຄອງຕົວ, ພັດທະນາຄວາມແມ່ນຍຳຂອງຂໍ້ມູນ, ປະກັນຄວາມສອດຄ້ອງກັບຂໍ້ກຳນົດ ແລະປັບປຸງປະສິດທິພາບໂດຍລວມຂອງຂະບວນການເຮັດວຽກໃນຫ້ອງປະດິບັດການ.
 hero:
-  title: ລາວ LIS ນາຊະຫດູລະບັດ
-  description: ສູນກາງຂໍ້ມູນທາງການແພດທີ່ໃຫຍ່ທີ່ສຸດໃນປະເທດ ເຊື່ອມໂຍງຂໍ້ມູນເຄືອຂ່າຍຂະຫນາດໃຫຍ່ ພ້ອມລະບົບເກັບຂໍ້ມູນທີ່ມີປະສິດທິພາບ ສະໜັບສະໜູນການຄຸ້ມຄອງຜົນການກວດ ແລະຂໍ້ມູນຫ້ອງປະຕິບັດການທາງການແພດຢ່າງຄົບວົງຈອນ
+  title: LAOS LISM INTERNATIONAL
+  description: ລະບົບຈັດການຂໍ້ມູນຫ້ອງປະດິບັດການ (Laboratory Information Management System - LIMS) ທີ່ເໝາະສົມສຳລັບສປປ ລາວ. LIMS ເປັນລະບົບຊອບແວທີ່ໃຊ້ໃນຫ້ອງປະດິບັດການເພື່ອຈັດການ ຕິດຕາມ ແລະວິເຄາະຂໍ້ມູນແລະຕົວຢ່າງ. ມັກຖືກນຳໃຊ້ໃນອຸດສາຫະກໍາຕ່າງໆ ຢ່າງເຊັ່ນ ຢາ ສຸຂະພາບ ຄວາມປອດໄພທາງອາຫານ ການທົດສອບສິ່ງແວດລ້ອມ ແລະອື່ນໆ. LIMS ຊ່ວຍໃຫ້ການດຳເນີນການຂອງຫ້ອງປະດິບັດການມີຄວາມຄອງຕົວ, ພັດທະນາຄວາມແມ່ນຍຳຂອງຂໍ້ມູນ, ປະກັນຄວາມສອດຄ້ອງກັບຂໍ້ກຳນົດ ແລະປັບປຸງປະສິດທິພາບໂດຍລວມຂອງຂະບວນການເຮັດວຽກໃນຫ້ອງປະດິບັດການ.
   headline:
-    label: ລາວ LIS
+    label: LOAS LIS
     to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: ເລີ່ມຕົ້ນ LIS
+    - label: ສະເໝີບ LIS
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: "#features"
       size: xl
+    # - label: Use this template
+    #   icon: i-simple-icons-github
+    #   size: xl
+    #   color: gray
+    #   to: https://github.com/nuxt-ui-pro/landing
+    #   target: _blank
 logos:
-  title: ໄວ້ໃຈໂດຍບໍລິສັດທີ່ມີຊື່ສຽງທົ່ວໂລກ
+  title: ເຊື່ອຖືໄດ້ໂດຍດີທີ່ສຸດຂອງໂລກ
   icons:
     - i-simple-icons-amazonaws
     - i-simple-icons-heroku
@@ -22,165 +28,122 @@ logos:
     - i-simple-icons-vercel
     - i-simple-icons-cloudflare
 features:
-  headline: ຄຸນລັກສະນະ
-  title: ເລືອກເພື່ອເຂົ້າເຖິງລະບົບ.
-  description: ລອເຣມ ອິບຊັມ ດອເລໍ ຊິດ ເອເມັດ, ຄອນເຊັກເຕີເຕີ ອິດອິບິຊັງ ເອລິດ, ເຊດ ໂດ ເອຍູຊໂມດ ເທມໂປຣ ອິນຊີດິເດນ ອຸດ ລາໂບເຣ ເອັດ ໂດເລໍ ມາກນາ ອາລິຄວາ.
+  headline:
+  title: LAOS LIMS SYSTEM
+  description: ເລືອກເພື່ອເຂົ້າເຖິງລະບົບ
   items:
-    - title: ລາວ LIMS
-      description: ອິດ ລາໂບເຣ ລາໂບຣິສ ດູອີສ ໂນດສຕຣູດ ເອກເຊປເຕີ ອຸດ ເວລິດ ນູລາ ມາກນາ ລອເຣມ ໂພໄຣເດນ ນອນ.
+    - title: LAOS LIMS
+      description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       target: _blank
       icon: i-covid-virus-lab-research-microscope
-    - title: ລາວ PMS
-      description: ມາກນາ ລອເຣມ ເອັກຊິເລມ ຟູກອຽດ ເອດ ເອນີມ ເອິທ ໄອຣິຣ ຊິດ ດູອີສ ມິນິມ.
+    - title: LOAS PMS
+      description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
       to: https://pms.pointit.co.th/login
-      target: _blank
       icon: i-covid-covid19-virus-patient-1
-    - title: ຂໍ້ມູນຜູ້ປ່ວຍ
-      description: ໂພໄຣເດນ ໂນດສຕຣູດ ເອກເຊປເຕີ ຊິດ ເອດ ຄວລີບ ຄອນເຊັກເຕີເຕີ ອອເຕ້ ອິດອິບິຊັງ ນອນ ແອນິມ ອຸລິຄອ.
+      target: _blank
+    - title: Patient Info
+      description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing non anim ullamco.
       to: http://laoslis.com:888/
       target: _blank
       icon: i-medical-icon-inpatient
-    - title: ຄວາມໄວ
-      description: ຄີ ຣີພິເຮນເດຣິດ ໂນດສຕຣູດ ໂດໂລເຣ ນີຊິ ເອດ ຟູກອຽດ ລາໂບເຣ ເອຍູຊໂມດ ຊິເທ່ ອາລິຄິບ ນີຊິ ໂວລັບແທ.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+systems:
+  headline:
+  title: LAOS WEB SITE
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  items:
+    - title: CDC
+      description: Department of Communicable Disease Control.
+      to: https://cdc.gov.la
       target: _blank
-      icon: i-healthicons-patient-band
-    - title: ລາຄາບໍ່ແພງ
-      description: ຣີພິເຮນເດຣິດ ຟູກອຽດ ເອລິທ ອິນ ໂດ ອິບຊັມ ອຸດ ປາລິອາທູ.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: geo:ui-earth-east
+    - title: NCLE
+      description: National Centre for Laboratories and Epidemiology (NCLE)
+      to: https://ncle.gov.la
+      icon: geo:ui-earth-east
       target: _blank
-      icon: i-medical-icon-inpatient
-    - title: ປັບໄດ້
-      description: ລອເຣມ ເດສຊເຊີດ ເອຍູຊໂມດ. ເອອິນ ຄອນເຊັກເຕີເຕີ ມິນິມ ອອຟຟິເຊຍ ອຸລລາມຄອ ເອິນິນ ເດສຊເຊີດ ເອສ.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+    - title: CHAS
+      description: Center of HIV/AIDS and STIs (CHAS).
+      to: https://chas.gov.la
       target: _blank
-      icon: i-mdi-patient
+      icon: geo:ui-earth-east
+    - title: NTC
+      description: National TB Center (NTC).
+      to: https://ncle.gov.la/
+      target: _blank
+      icon: geo:ui-earth-east
 about:
-  headline: ກ່ຽວກັບພວກເຮົາ
-  title: ແຜນທີ່ເຫມາະສົມກັບຄວາມຕ້ອງການທຸກປະເພດ
-  description: ປາລິອາທູ ລາໂບເຣ ໂດໂລເຣ ເອອຄອມໂມໂດ ຊິດ ເອອເທ ອາລິຄິບ ຄິ ເອັດ ຊີເອັລລາມ ເອກເຊປເຕີ.
+  headline: About Us
+  title: A plan for every need
+  description: Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum excepteur.
   plans:
-    - title: ພື້ນຖານ
-      description: ແຜນພື້ນຖານສໍາລັບບຸກຄົນທົ່ວໄປ.
+    - title: Basic
+      description: A basic plan for individuals.
       price: $9.99
       align: top
       button:
-        label: ເລີ່ມຕົ້ນ
+        label: Get Started
         color: gray
       features:
-        - 1 GB ພື້ນທີ່ຈັດເກັບ
-        - 1 ບັນຊີອີເມລ
-        - 1 ໂດເມນ
-        - 1 ເວັບໄຊດ໌
-        - 1 ຖານຂໍ້ມູນ
-        - 1 ໃບຮັບຮອງ SSL
-        - 1 ການສະໜັບສະໜູນ
-    - title: ມາດຕາຖານ
-      description: ແຜນມາດຕາຖານສໍາລັບທີມເລັກ.
+        - 1 GB Storage
+        - 1 Email Account
+        - 1 Domain
+        - 1 Website
+        - 1 Database
+        - 1 SSL Certificate
+        - 1 Support Ticket
+    - title: Standard
+      description: A standard plan for small teams.
       price: $19.99
       highlight: true
       scale: true
       align: top
       button:
-        label: ເລີ່ມຕົ້ນ
+        label: Get Started
       features:
-        - 10 GB ພື້ນທີ່ຈັດເກັບ
-        - 10 ບັນຊີອີເມລ
-        - 10 ໂດເມນ
-        - 10 ເວັບໄຊດ໌
-        - 10 ຖານຂໍ້ມູນ
-        - 10 ໃບຮັບຮອງ SSL
-        - 10 ການສະໜັບສະໜູນ
-    - title: ພຣີເມຍມ
-      description: ແຜນພຣີເມຍມສໍາລັບທີມໃຫຍ່.
+        - 10 GB Storage
+        - 10 Email Accounts
+        - 10 Domains
+        - 10 Websites
+        - 10 Databases
+        - 10 SSL Certificates
+        - 10 Support Tickets
+    - title: Premium
+      description: A premium plan for large teams.
       price: $29.99
       align: top
       button:
-        label: ເລີ່ມຕົ້ນ
+        label: Get Started
         color: gray
       features:
-        - 100 GB ພື້ນທີ່ຈັດເກັບ
-        - 100 ບັນຊີອີເມລ
-        - 100 ໂດເມນ
-        - 100 ເວັບໄຊດ໌
-        - 100 ຖານຂໍ້ມູນ
-        - 100 ໃບຮັບຮອງ SSL
-        - 100 ການສະໜັບສະໜູນ
-testimonials:
-  headline: ຄໍາຢັນຢືນ
-  title: ສິ່ງທີ່ລູກຄ້າຂອງເຮົາພູດເຖິງ.
-  description: ໂພໄຣເດນ ສັນຕ໌ ເອຍູຊໂຊກິເຊີມັນອິນິມ ລາໂບເຣ ເອນິມ ລາບອລິສ ລາໂບເຣ ເອັດອິດ ເອສ.
-  items:
-    - quote: ນອສທຣຸດ ເທມໂພຣ ສັນຕ໌ ຟູກອຽດ. ໂດໂລເຣ ອິນ ຊິດ ໂດໂລເຣ ລາໂບເຣ ນອນ ໂອຄັກເຄຍັດ ອິດອິບຊັງ ລາໂບເຣ ອຸລລາມຄອ ເອະອີມ ອັກເຊປເຕີ. ເອິນ ຟູກອຽດ ລາໂບເຣ ຊິດ ເວລິດ ເອສເອ ເອຍູຊໂມດ ນອນ ເອ ໂວລັບແທ ຄິວປິດາທັດ ຣີພິເຮນເດຣິດ ອຸລລາມຄອ ເອິບລາໂບເຣ ໂອຄັກເຄຍັດ ອາລິຄິບ.
-      author:
-        name: ໂຣສ ໂຣເບີຣສັນ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=1
-          loading: lazy
-    - quote: ເອຍູຊໂມດ ໂດໂລເຣ ເອະອີມ ອຸດ ນູລາ ປາລິອາທູຣ ອອຟຟິເຊັຍ ຄິວອເອັມອີທ ເອັກເຊີກຊິເຊີມັນ.
-      author:
-        name: ສາມ ຮອດເຈີດສິງ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=7
-          loading: lazy
-    - quote: ອິດ ດູອີສ ເວລິດ ເອະອີມ ອິດອິບິຊັງ ອາດ ນີຊິ ອິນຊີດິເດນ ມາກນາ ເອກຊິຊິເດນ ເດເລເວ ເອັກເຊະຕັດເຊີ ເອັກເຊະຕັດ ເອຍູຊໂມດ ລາໂບເຣ ເອມສເອ. ເອຍູຊໂມດ ເອັກເຊະບັກ ອິຣະອີ ອອຟຟິເຊັຍ ລາໂບເຣ ອິດອິດເອັກເຊະເຕີ.
-      author:
-        name: ເຄເນເລຍສ ຊີບພາລດສິດ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=3
-          loading: lazy
-    - quote: ເວລິດ ຄອນເຊັກເຕີເຕີ ເອຍູຊໂມດ ຄິວອເອັມອີທ ໂອດຄອມໂດ ເອ ເອັກຊເຊະເອອອອບລາ ເອເກອເອີ ອອບລາຍເຊັດ ເອເກອເອີ ເອຊອເວດເມ. ອາລິຄິບ ເອອຄອເມ ເອັກເຊະເອອອອບລາ.
-      author:
-        name: ເດສທີນິວ ວູດສິດ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=5
-          loading: lazy
-    - quote: ໂພໄຣເດນ ຄິວອເອັມອີທ ເດສເຊີດ ຄິວີ ເອຍູຊໂມດ ເວເອຍູເຊີແຊກຊອນ ເອີຍານີ ລອງລາໂບເຣ ອິບຊັງ ໂວລັບແທ ຄິວປິດາທັດ ອິຣະອີ ເອຍູຊໂມດ ເອມສເອ. ເອັກເຊະບັກ ອິຣະອີ ເອັກເຊະເປີບ ເອອເປີກ ເອອເອຊອເອກເຊີແຊກຊອນ ເອິລູລາມຄອ.
-      author:
-        name: ຄາເລບ ມາຄຄອລມິກສິດ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=8
-          loading: lazy
-    - quote: ມາກນາ ອອຟຟິເຊັຍ ຄວອເອັມອີ ເອອເອ ເອອອອບລາມຄອ ເອເກອເອີ ເອອອອບລາ. ອອເຕ ເອສເອ ໂດໂລເຣ ຄອມໂດ ຊິງເອອເມເອີອອຟຟິເຊັຍ ເອອອອບລາວອອຟຟິເຊັຍ ເອເສເອ ເອອເມເອີອອອອບລາ.
-      author:
-        name: ຈາສມິນ ມັກຄອນລິວ
-        description: CEO ຢູ່ Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=9
-          loading: lazy
-cta:
-  title: ເລີ່ມຕົ້ນມື້ນີ້
-  description: ນິຊິ ມອລິຕ ອິດ ອາລິຄິບ ອູນ ເອສອາ ລາໂບເຣ ຊິດ ອູນ.
-  links:
-    - label: ລົງທະບຽນຟຣີ
-      size: xl
+        - 100 GB Storage
+        - 100 Email Accounts
+        - 100 Domains
+        - 100 Websites
+        - 100 Databases
+        - 100 SSL Certificates
+        - 100 Support Tickets
 faq:
-  title: ຄໍາຖາມທີ່ພົບເວົາໆ
-  description: ຄວອເອັມອີ ໂດໂລເຣ ປາລິອາທູຣ ຄອມໂມໂດ ອາລິຄິບ ອາມັດ ເອີເມ ດີເສເຊີດ ເອລິທ ເອດອິກ ເອລິທ ເອອອອບລາ.
+  title: ຄຳຖາມທີ່ຖືກຖາມເລື້ອຍໆ
+  description: ລວບລວມຄຳຖາມ ແລະ ຄຳຕອບທີ່ຜູ້ໃຊ້ສອບຖາມເຂົ້າມາຫຼາຍທີ່ສຸດ
   items:
-    - label: ການບໍລິການນີ້ປອດໄພບໍ?
-      content: ຄວອເອັມອີ ຊິນໂຕ ໂພໄຣເດນ ຣີພິເຮນເດຣິດ ອິດອິບຊັງ ປະມູຄິດຕະດີກເດເບເຊີເດຍ ລາໂບເຣ ອຸລລາມຄອ ເອີຍານີ ລາໂບເຣ ນິບປາລິອາທູ ອູລລາມຄອ ສັນຕິ.
+    - label: ລະບົບມີຄວາມປອດໄພບໍ່?
+      content: ລະບົບຂອງພວກເຮົາມີການເຂົ້າລະຫັດຂໍ້ມູນ ແລະ ໄດ້ຮັບການຮັບຮອງມາດຕະຖານຄວາມປອດໄພ ພ້ອມການກວດສອບຄວາມປອດໄພເປັນປະຈຳ ເພື່ອປົກປ້ອງຂໍ້ມູນຂອງຜູ້ໃຊ້
       defaultOpen: true
-    - label: ແນວໃດຈຶ່ງສາມາດຍົກເລີກການສະໝັກ?
-      content: ຄອນເຊັກເຕີເຕີ ອອຟຟິເຊັຍ ລາໂບເຣ ໂດໂລເຣ ຄວອເອັມອີ ອິດອິບຊັງ ອາລິຄິບ ມາກນາ ລາໂບເຣ ເອັດອິດ ອີເສເອມີອອຟຟິເຊັຍ.
-    - label: ບໍລິການທົດລອງຟຣີແມ່ນແນວໃດ?
-      content: ຄິວອເອັມອີ ຄວອເອັມອີອີ ໂດໂລເຣ ອີອີ ລາໂບເຣ ອີອີອິມູມໄອຄອດເຊີອາຊິບ.
-    - label: ສາມາດປ່ຽນແຜນໄດ້ບໍ່?
-      content: ດີເສເຊີດ ອູລລາມຄອ ລາໂບເຣ ລາໂບເຣ ອີບຊັງ ອາລິຄິບ ອາລິຄິບ ມາກນາ ອອຟຟິເຊັຍ ອີອີມີແຊກຊອນ.
-    - label: ພວກເຮົາສາມາດຄືນເງິນໄດ້ບໍ່?
-      content: ດີເສເຊີດ ມິນິມ ອອຟຟິເຊັຍ ລາໂບເຣ ມິນິມ ລາໂບເຣ ລາໂບເຣ ຄອມໂດ ປາລິອາທູຣ.
-    - label: ພວກເຮົາສະໜັບສະໜູນບໍ່?
-      content: ອີອີມີ ຊິຄອນທັກ ລາໂບເຣ ອອຟຟິເຊັຍ ເອອເມເອີອອບລາ.
+    - label: ຕ້ອງການຍົກເລີກການໃຊ້ງານຕ້ອງເຮັດແນວໃດ?
+      content: ທ່ານສາມາດຕິດຕໍ່ພະນັກງານຜ່ານຊ່ອງທາງການຕິດຕໍ່ຂອງພວກເຮົາເພື່ອດຳເນີນການຍົກເລີກການໃຊ້ງານໄດ້ ໂດຍແຈ້ງລ່ວງໜ້າຢ່າງໜ້ອຍ 30 ວັນ
+    - label: ທົດລອງໃຊ້ງານຟຣີເຮັດວຽກແນວໃດ?
+      content: ພວກເຮົາໃຫ້ທ່ານທົດລອງໃຊ້ງານລະບົບໄດ້ຟຣີ 30 ວັນ ພ້ອມຟີເຈີການໃຊ້ງານຄົບຖ້ວນ ບໍ່ມີຄ່າໃຊ້ຈ່າຍແອບແຝງ
+    - label: ສາມາດປ່ຽນແຜນການໃຊ້ງານພາຍຫຼັງໄດ້ບໍ່?
+      content: ສາມາດປ່ຽນແຜນການໃຊ້ງານໄດ້ຕະຫຼອດເວລາ ໂດຍຄ່າບໍລິການຈະປັບຕາມແຜນໃໝ່ໃນຮອບບິນຕໍ່ໄປ
+    - label: ມີນະໂຍບາຍຄືນເງິນແນວໃດ?
+      content: ພວກເຮົາມີນະໂຍບາຍຄືນເງິນພາຍໃນ 14 ວັນ ຖ້າທ່ານບໍ່ພໍໃຈກັບການໃຊ້ງານ ໂດຍບໍ່ມີຄ່າໃຊ້ຈ່າຍໃດໆ
+    - label: ມີບໍລິການຊ່ວຍເຫຼືອບໍ່?
+      content: ພວກເຮົາມີທີມສະໜັບສະໜູນພ້ອມໃຫ້ການຊ່ວຍເຫຼືອຕະຫຼອດ 24 ຊົ່ວໂມງ ຜ່ານຊ່ອງທາງໂທລະສັບ ອີເມວ ແລະ ແຊັດ
 Document:
   headline: ເອກະສານ
-  title: ເອກະສານສຳຄັນ
-  description: ເອກະສານສຳລັບຄົນເຈັບ ແລະ ບຸກຄະລາກອນທາງການແພດ
+  title: ຄູ່ມືຜູ້ໃຊ້ລະບົບ
+  description: ເອກະສານ ແລະແບບຟອມເພື່ອຊ່ວຍໃຫ້ທ່ານເລີ່ມຕົ້ນລະບົບ.
   items:
     - documentName: ແບບຟອມລົງທະບຽນຄົນເຈັບ
       lastUpdated: 2024-03-15
@@ -188,15 +151,53 @@ Document:
       fileSize: 250 KB
       downloadUrl: /documents/patient-registration.pdf
       previewUrl: /preview/patient-registration.pdf
-    - documentName: ແບບຟອມຂໍປະຫວັດການປິ່ນປົວ
+    - documentName: ແບບຟອມການຮ້ອງຂໍປະຫວັດທາງການແພດ
       lastUpdated: 2024-03-14
       fileType: DOCX
       fileSize: 180 KB
       downloadUrl: /documents/medical-history.docx
       previewUrl: /preview/medical-history.pdf
-    - documentName: ໜັງສືໃຫ້ຄວາມຍິນຍອມການປິ່ນປົວ
+    - documentName: ແບບຟອມການຍິນຍອມ
       lastUpdated: 2024-03-13
       fileType: PDF
       fileSize: 320 KB
       downloadUrl: /documents/consent.pdf
       previewUrl: /preview/consent.pdf
+contact:
+  title: ຕິດຕໍ່ພວກເຮົາ
+  description: ຖ້າທ່ານມີຄຳຖາມ ຫຼື ຕ້ອງການຄວາມຊ່ວຍເຫຼືອ ພວກເຮົາຍິນດີໃຫ້ບໍລິການ
+  info:
+    - type: email
+      label: ອີເມວ
+      value: admin@laoslims.com
+      icon: i-heroicons-envelope
+    - type: whatsapp
+      label: ວອດສ໌ແອັບ
+      value: +66 (0) 6-2848-5995
+      icon: i-heroicons-phone
+Video:
+  headline: ວິດີໂອແນະນຳການໃຊ້ງານ
+  title: ວິທີການໃຊ້ງານລະບົບ LAOS LIMS
+  description: ຮັບຊົມວິດີໂອສອນການໃຊ້ງານລະບົບເພື່ອຮຽນຮູ້ວິທີການໃຊ້ງານລະບົບຢ່າງມີປະສິດທິພາບ
+  items:
+    - title: ເລີ່ມຕົ້ນໃຊ້ງານ LAOS LIMS
+      description: ຮຽນຮູ້ການໃຊ້ງານພື້ນຖານຂອງລະບົບ LAOS LIMS
+      thumbnail: "/images/nexlab.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "5:30"
+      date: "20-03-2567"
+      isPlaying: false
+    - title: ການລົງທະບຽນຄົນເຈັບ
+      description: ຄູ່ມືການລົງທະບຽນຄົນເຈັບແບບທີລະຂັ້ນຕອນ
+      thumbnail: "/images/pms.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "4:15"
+      date: "19-03-2567"
+      isPlaying: false
+    - title: ການຈັດການຜົນກວດທາງຫ້ອງວິເຄາະ
+      description: ວິທີການຈັດການແລະປະມວນຜົນການກວດທາງຫ້ອງວິເຄາະ
+      thumbnail: "/images/patient.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "6:45"
+      date: "18-03-2567"
+      isPlaying: false

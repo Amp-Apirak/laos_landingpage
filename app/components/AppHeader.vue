@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from "vue"; // นำเข้า Composition API จาก Vue
 import { useI18n } from "vue-i18n"; // นำเข้า useI18n สำหรับการจัดการการแปลภาษา
-import { useRouter, useRoute } from 'vue-router'; // นำเข้า useRouter และ useRoute สำหรับจัดการเส้นทาง
+import { useRouter, useRoute } from "vue-router"; // นำเข้า useRouter และ useRoute สำหรับจัดการเส้นทาง
 
 // กำหนด ref สำหรับตรวจสอบขนาดหน้าจอ
 const isMobileView = ref(false);
@@ -33,26 +33,28 @@ const currentLanguage = ref(locale.value); // กำหนดค่าเริ�
 
 // ฟังก์ชันสำหรับเปลี่ยนภาษา
 const changeLanguage = (lang) => {
-  console.log('Changing language to:', lang); // เพิ่ม console log เพื่อตรวจสอบภาษาใหม่
+  console.log("Changing language to:", lang); // เพิ่ม console log เพื่อตรวจสอบภาษาใหม่
   locale.value = lang; // เปลี่ยนค่า locale
 
   const newPath = router.resolve({ path: `/${lang}` }).href; // กำหนดเส้นทางใหม่ตามภาษาที่เลือก
-  console.log('Navigating to new path:', newPath); // เพิ่ม console log เพื่อตรวจสอบเส้นทางใหม่
+  console.log("Navigating to new path:", newPath); // เพิ่ม console log เพื่อตรวจสอบเส้นทางใหม่
   router.push(newPath); // เปลี่ยนเส้นทางไปยัง URL ใหม่
 };
 
 // Watch locale เพื่อให้แน่ใจว่า currentLanguage อัปเดตตาม locale
 watch(locale, (newLocale) => {
   currentLanguage.value = newLocale; // อัปเดต currentLanguage เมื่อ locale เปลี่ยนแปลง
-  console.log('Locale changed to:', newLocale); // เพิ่ม console log เพื่อตรวจสอบการเปลี่ยนแปลงของ locale
+  console.log("Locale changed to:", newLocale); // เพิ่ม console log เพื่อตรวจสอบการเปลี่ยนแปลงของ locale
 
   // อัปเดตหัวข้อ scrollspy ตามการเปลี่ยนแปลงของภาษา
-  updateHeadings([
-    document.querySelector('#features') ?? undefined,
-    document.querySelector('#about') ?? undefined,
-    document.querySelector('#documents') ?? undefined,
-    document.querySelector('#faq') ?? undefined
-  ].filter(Boolean)); // ลบค่า null หรือ undefined ออก
+  updateHeadings(
+    [
+      document.querySelector("#features") ?? undefined,
+      document.querySelector("#about") ?? undefined,
+      document.querySelector("#documents") ?? undefined,
+      document.querySelector("#faq") ?? undefined,
+    ].filter(Boolean)
+  ); // ลบค่า null หรือ undefined ออก
 });
 
 // กำหนดรายการภาษาที่รองรับ
@@ -64,24 +66,55 @@ const languages = [
 
 // สร้าง computed property สำหรับลิงก์ในเมนู
 const links = computed(() => [
-  { label: t("features"), to: "#features", icon: "i-heroicons-cube-transparent", active: activeHeadings.value.includes("features") && !activeHeadings.value.includes("about") },
-  { label: t("about"), to: "#about", icon: "i-heroicons-credit-card", active: activeHeadings.value.includes("about") && !activeHeadings.value.includes("deocuments") },
-  { label: t("documents"), to: "#documents", icon: "i-heroicons-academic-cap", active: activeHeadings.value.includes("deocuments") },
-  { label: t("faq"), to: "#faq", icon: "i-heroicons-question-mark-circle", active: activeHeadings.value.includes("faq") },
+  {
+    label: t("features"),
+    to: "#features",
+    icon: "i-heroicons-cube-transparent",
+    active:
+      activeHeadings.value.includes("features") &&
+      !activeHeadings.value.includes("about"),
+  },
+  {
+    label: t("about"),
+    to: "#about",
+    icon: "i-heroicons-credit-card",
+    active:
+      activeHeadings.value.includes("about") &&
+      !activeHeadings.value.includes("deocuments"),
+  },
+  {
+    label: t("documents"),
+    to: "#documents",
+    icon: "i-heroicons-academic-cap",
+    active: activeHeadings.value.includes("deocuments"),
+  },
+  {
+    label: t("faq"),
+    to: "#faq",
+    icon: "i-heroicons-question-mark-circle",
+    active: activeHeadings.value.includes("faq"),
+  },
 ]);
 
 // computed property สำหรับแสดงชื่อภาษาปัจจุบัน
 const currentLanguageLabel = computed(() => {
-  return languages.find((lang) => lang.code === currentLanguage.value)?.label || "Select Language";
+  return (
+    languages.find((lang) => lang.code === currentLanguage.value)?.label ||
+    "Select Language"
+  );
 });
-
 </script>
 
 <template>
   <!-- ส่วนหัวของแอปพลิเคชัน -->
   <UHeader :links="links">
     <template #logo>
-      LAOS LIMS
+      <div class="flex items-center gap-2">
+        <NuxtLink to="/" class="flex items-center gap-3">
+          <img src="/images/logo.png" alt="LAOS LIMS" class="h-16" />
+          <span class="font-semibold text-lg">LAOS LIMS</span>
+        </NuxtLink>
+      </div>
     </template>
 
     <!-- ส่วนของการเลือกภาษา -->

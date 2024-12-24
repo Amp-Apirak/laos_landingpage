@@ -1,10 +1,10 @@
-title: ลาว LISM อินเตอร์เนชั่นแนล
-description: ศูนย์กลางการรวบรวมข้อมูลทางการแพทย์ที่ใหญ่ที่สุดในประเทศ เชื่อมโยงเครือข่ายข้อมูลขนาดใหญ่ พร้อมระบบจัดเก็บข้อมูลที่มีประสิทธิภาพ รองรับการจัดการผลการตรวจและข้อมูลห้องปฏิบัติการทางการแพทย์อย่างครบวงจร
+title: LAOS LISM INTERNATIONAL
+description: ระบบจัดการข้อมูลห้องปฏิบัติการ (Laboratory Information Management System - LIMS) ที่เหมาะสมกับประเทศลาว LIMS เป็นระบบซอฟต์แวร์ที่ใช้ในห้องปฏิบัติการเพื่อจัดการ ติดตาม และวิเคราะห์ข้อมูลและตัวอย่าง มักถูกใช้งานในอุตสาหกรรมต่าง ๆ เช่น ยา สุขภาพ ความปลอดภัยทางอาหาร การทดสอบสิ่งแวดล้อม และอื่น ๆ ระบบ LIMS ช่วยให้การดำเนินงานของห้องปฏิบัติการมีความคล่องตัว เพิ่มความแม่นยำของข้อมูล รักษาความสอดคล้องกับกฎระเบียบ และเพิ่มประสิทธิภาพโดยรวมของกระบวนการทำงานในห้องปฏิบัติการ
 hero:
-  title: ลาว LISM อินเตอร์เนชั่นแนล
-  description: ศูนย์กลางการรวบรวมข้อมูลทางการแพทย์ที่ใหญ่ที่สุดในประเทศ เชื่อมโยงเครือข่ายข้อมูลขนาดใหญ่ พร้อมระบบจัดเก็บข้อมูลที่มีประสิทธิภาพ รองรับการจัดการผลการตรวจและข้อมูลห้องปฏิบัติการทางการแพทย์อย่างครบวงจร
+  title: LAOS LISM INTERNATIONAL
+  description: ระบบจัดการข้อมูลห้องปฏิบัติการ (Laboratory Information Management System - LIMS) ที่เหมาะสมกับประเทศลาว LIMS เป็นระบบซอฟต์แวร์ที่ใช้ในห้องปฏิบัติการเพื่อจัดการ ติดตาม และวิเคราะห์ข้อมูลและตัวอย่าง มักถูกใช้งานในอุตสาหกรรมต่าง ๆ เช่น ยา สุขภาพ ความปลอดภัยทางอาหาร การทดสอบสิ่งแวดล้อม และอื่น ๆ ระบบ LIMS ช่วยให้การดำเนินงานของห้องปฏิบัติการมีความคล่องตัว เพิ่มความแม่นยำของข้อมูล รักษาความสอดคล้องกับกฎระเบียบ และเพิ่มประสิทธิภาพโดยรวมของกระบวนการทำงานในห้องปฏิบัติการ
   headline:
-    label: ลาว LISM
+    label: LOAS LIS
     to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
@@ -13,8 +13,14 @@ hero:
       trailing: true
       to: "#features"
       size: xl
+    # - label: Use this template
+    #   icon: i-simple-icons-github
+    #   size: xl
+    #   color: gray
+    #   to: https://github.com/nuxt-ui-pro/landing
+    #   target: _blank
 logos:
-  title: เชื่อมั่นโดยบริษัทชั้นนำระดับโลก
+  title: ได้รับความไว้วางใจจากผู้เชี่ยวชาญที่ดีที่สุดในโลก
   icons:
     - i-simple-icons-amazonaws
     - i-simple-icons-heroku
@@ -22,181 +28,176 @@ logos:
     - i-simple-icons-vercel
     - i-simple-icons-cloudflare
 features:
-  headline: คุณสมบัติ
-  title: เลือกเพื่อเข้าถึงระบบ
-  description: ลอเร็ม อิปซัม ดอเลอร์ ซิท อาเมท, คอนเซคเทอร์ เอดิติง เอลิท, เซด โด อีอุสโมด เทมพอร์ อินซิเดนทัด อุท ลาโบเร เอท โดโลเร แมกนา อาลิควา.
+  headline:
+  title: LAOS LIMS SYSTEM
+  description: เลือกเพื่อเข้าใช้งานระบบ
   items:
-    - title: ลาว LIMS
-      description: ไอดี ลาโบรัม ลาโบริส ดูอิส โนสตรุด เอ็กเซปเตอร์ อุท เวลิต นุลลา แมกนา ลอเร็ม โพรไอเดนท์ นอน.
+    - title: LAOS LIMS
+      description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
       to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
       target: _blank
       icon: i-covid-virus-lab-research-microscope
-    - title: ลาว PMS
-      description: แมกนา ลอเร็ม เอ็กซิลลุม ฟูเกียต แอด เอนิม เอาเต อิรูเร ซิท ดูอิส มินิม.
+    - title: LOAS PMS
+      description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
       to: https://pms.pointit.co.th/login
       icon: i-covid-covid19-virus-patient-1
       target: _blank
-    - title: ข้อมูลผู้ป่วย
-      description: โพรไอเดนท์ โนสตรุด เอ็กเซปเตอร์ ซินต์ อุท คัลปา คอนเซ็กเตทูร์ เอาเต อดิพิสชิ่ง นอน อะนิม อุลลัมโก.
+    - title: Patient Info
+      description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing non anim ullamco.
       to: http://laoslis.com:888/
       target: _blank
       icon: i-medical-icon-inpatient
-    - title: รวดเร็ว
-      description: ควี รีเพรเฮ็นเดริต โนสตรุด โดโลเร นิซี อัด ฟูเกียต ลาโบเร เอียสโมด ซิท อาลิควิป นิซี โวลุปเตท.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+systems:
+  headline:
+  title: LAOS WEB SITE
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  items:
+    - title: CDC
+      description: Department of Communicable Disease Control.
+      to: https://cdc.gov.la
       target: _blank
-      icon: i-healthicons-patient-band
-    - title: ราคาประหยัด
-      description: รีเพรเฮ็นเดริต ฟูเกียต เอลิต อิน โด อิปซัม อุท ปาริอาทูร์.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+      icon: geo:ui-earth-east
+    - title: NCLE
+      description: National Centre for Laboratories and Epidemiology (NCLE)
+      to: https://ncle.gov.la
+      icon: geo:ui-earth-east
       target: _blank
-      icon: i-medical-icon-inpatient
-    - title: ขยายตัวได้
-      description: ลอเร็ม เดเซอร์ท เอท อีอุสโมด. เออิน คอนเซ็กเตทูร์ มินิม ออฟฟิซเซีย อุลลัมโก เอนิม เดเซอร์ท เอส.
-      to: https://www.laoslis.com/NexLab/main/frmLogIn.aspx
+    - title: CHAS
+      description: Center of HIV/AIDS and STIs (CHAS).
+      to: https://chas.gov.la
       target: _blank
-      icon: i-mdi-patient
+      icon: geo:ui-earth-east
+    - title: NTC
+      description: National TB Center (NTC).
+      to: https://ncle.gov.la/
+      target: _blank
+      icon: geo:ui-earth-east
 about:
-  headline: เกี่ยวกับเรา
-  title: แผนที่เหมาะสำหรับทุกความต้องการ
-  description: ปาริอาทูร์ ลาโบรัม โดโลเร เอ คอมโมโด ซิท เอาเต อาลิควิป ควี เอ คิลลัม เอ็กเซปเตอร์.
+  headline: About Us
+  title: A plan for every need
+  description: Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum excepteur.
   plans:
-    - title: พื้นฐาน
-      description: แผนพื้นฐานสำหรับบุคคลทั่วไป.
+    - title: Basic
+      description: A basic plan for individuals.
       price: $9.99
       align: top
       button:
-        label: เริ่มต้น
+        label: Get Started
         color: gray
       features:
-        - พื้นที่จัดเก็บข้อมูล 1 GB
-        - บัญชีอีเมล 1 บัญชี
-        - โดเมน 1 โดเมน
-        - เว็บไซต์ 1 เว็บไซต์
-        - ฐานข้อมูล 1 ฐานข้อมูล
-        - ใบรับรอง SSL 1 ใบ
-        - การสนับสนุน 1 รายการ
-    - title: มาตรฐาน
-      description: แผนมาตรฐานสำหรับทีมขนาดเล็ก.
+        - 1 GB Storage
+        - 1 Email Account
+        - 1 Domain
+        - 1 Website
+        - 1 Database
+        - 1 SSL Certificate
+        - 1 Support Ticket
+    - title: Standard
+      description: A standard plan for small teams.
       price: $19.99
       highlight: true
       scale: true
       align: top
       button:
-        label: เริ่มต้น
+        label: Get Started
       features:
-        - พื้นที่จัดเก็บข้อมูล 10 GB
-        - บัญชีอีเมล 10 บัญชี
-        - โดเมน 10 โดเมน
-        - เว็บไซต์ 10 เว็บไซต์
-        - ฐานข้อมูล 10 ฐานข้อมูล
-        - ใบรับรอง SSL 10 ใบ
-        - การสนับสนุน 10 รายการ
-    - title: พรีเมียม
-      description: แผนพรีเมียมสำหรับทีมขนาดใหญ่.
+        - 10 GB Storage
+        - 10 Email Accounts
+        - 10 Domains
+        - 10 Websites
+        - 10 Databases
+        - 10 SSL Certificates
+        - 10 Support Tickets
+    - title: Premium
+      description: A premium plan for large teams.
       price: $29.99
       align: top
       button:
-        label: เริ่มต้น
+        label: Get Started
         color: gray
       features:
-        - พื้นที่จัดเก็บข้อมูล 100 GB
-        - บัญชีอีเมล 100 บัญชี
-        - โดเมน 100 โดเมน
-        - เว็บไซต์ 100 เว็บไซต์
-        - ฐานข้อมูล 100 ฐานข้อมูล
-        - ใบรับรอง SSL 100 ใบ
-        - การสนับสนุน 100 รายการ
-testimonials:
-  headline: คำยืนยันจากลูกค้า
-  title: สิ่งที่ลูกค้าของเราพูดถึง.
-  description: โปรไอเดนท์ ซุนท์ เอ็กเซอซิเตชั่น มินิม ลาโบรัม เอ็นนิม ลาโบเร เอสเซ.
-  items:
-    - quote: โนสตรุด เทมพอร์ ซุนท์ ฟูเกียต. โดโลเร อิน ซินต์ โดโลเร ลาโบเร นอน แอดดิพิสชิ่ง ลอเร็ม ลาโบเร อุลลัมโก เอ็นนิม เอ็กเซปเตอร์. อิน ฟูเกียต ลาโบเร ซิท เวลิต ไอดี เวเนียม เอียสโมด นอน เอีย โวลุปเตท คูปิดาตา รีเพรเฮ็นเดริต อุลลัมโก โดโลเร. มอลลิต ลาโบรัม อุลลิควิป.
-      author:
-        name: โรส โรเบอร์สัน
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=1
-          loading: lazy
-    - quote: เอียสโมด โดโลเร เอาเต อุต นุลลา ปาริอาทูร์ โอฟฟิเชีย คอนเซควัด เอียเมท เอ็กเซอซิเตชั่น.
-      author:
-        name: เชส รอดเจอร์ส
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=7
-          loading: lazy
-    - quote: ไอ ดูอิส เวลิต เอนิม โอฟฟิเชีย แอด นิซี อินซิดิเดนท์ แมกนา เอ็กซ์ โดโลเร มินิม เดเซอร์ท โดโลเร. เอสเซ อินซิดิเดนท์ คิลลัม โนสตรุด เอสเซ โด ควิส เอาเต ลาโบเร เอาเต นูลลา เอียสโมด เอาเต นูลลา ลอเร็ม. อินซิดิเดนท์ เอ็กซ์ โวลุปเตท อิรุเร โอฟฟิเชีย ลาโบเร เอสเซ โปรไอเดนท์ เอส ควี.
-      author:
-        name: คอร์นีเลียส เชพพาร์ด
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=3
-          loading: lazy
-    - quote: เวลิต คอนเซคเตทูร์ อิน อดิพิสชิ่ง คัลปา เอียสโมด คอมโมโด ยู เอ็กซ์ โดโลเร. โอฟฟิเชีย อิรุเร นิซี โดโลเร เวลิต ฟูเกียต. อาลิควา ซินท์ อาลิควา เอาเต เอลิท ยู ซุนท์.
-      author:
-        name: เดสทีนี วูดส์
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=5
-          loading: lazy
-    - quote: โปรไอเดนท์ ควิส เดเซอร์ท ควี เอ็กเซอซิเตชั่น เวเนียม ไอดี ลอเร็ม เอส คูปิดาตา อิปซัม อิรุเร อาลิควิป แอด.
-      author:
-        name: คาเลบ แมคคอร์มิค
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=8
-          loading: lazy
-    - quote: แมกนา โอฟฟิเชีย ควี เอ ควี อิน โอฟฟิเชีย นอน โวลุปเตท อิปซัม คัลปา โด ลาโบเร ซันท์. เอาเต เอส โดโลเร คอมโมโด ซินต์ โอฟฟิเชีย แอด ลาโบเร โดโลเร แมกนา อาลิควิป เอ็กเซอซิเตชั่น เทมพอร์ คอมโมโด.
-      author:
-        name: แจสมิน แมคคอล
-        description: CEO ที่บริษัท
-        avatar:
-          src: https://i.pravatar.cc/120?img=9
-          loading: lazy
-cta:
-  title: เริ่มต้นวันนี้
-  description: นิซี มอลลิต ไอดี อาลิควิป ซุนท์ เอส เลโบรุม ซิท ซิท.
-  links:
-    - label: สมัครใช้งานฟรี
-      size: xl
+        - 100 GB Storage
+        - 100 Email Accounts
+        - 100 Domains
+        - 100 Websites
+        - 100 Databases
+        - 100 SSL Certificates
+        - 100 Support Tickets
 faq:
   title: คำถามที่พบบ่อย
-  description: คัลปา คอนเซคเตทูร์ โดโลเร ปาริอาทูร์ คอมโมโด อาลิควา เอาเต เทมพอร์ นิซี เอียเมท เดเซอร์ท เอลิท ซิลลัม.
+  description: รวบรวมคำถามและคำตอบที่ผู้ใช้งานสอบถามเข้ามาบ่อยที่สุด
   items:
-    - label: บริการนี้ปลอดภัยหรือไม่?
-      content: ควี ซุนท์ โนสตรุด อาลิควิป รีเพรเฮ็นเดริต เอ็นนิม โปรไอเดนท์ เวเนียม แมกนา อาลิควิป เวลิต โอเคแคท เอียสโมด นิซี เดเซอร์ท ซุนท์.
+    - label: ระบบมีความปลอดภัยหรือไม่?
+      content: ระบบของเรามีการเข้ารหัสข้อมูลและได้รับการรับรองมาตรฐานความปลอดภัย พร้อมการตรวจสอบความปลอดภัยอย่างสม่ำเสมอ เพื่อปกป้องข้อมูลของผู้ใช้งาน
       defaultOpen: true
-    - label: ฉันสามารถยกเลิกการสมัครได้อย่างไร?
-      content: คอนเซคเตทูร์ อิรุเร ลอเร็ม โนสตรุด อาดิพิสชิ่ง อาลิควา มอลลิต ลอเร็ม ซิท โอฟฟิเชีย แมกนา เอียสโมด คูปิดาตา.
-    - label: การทดลองใช้งานฟรีทำงานอย่างไร?
-      content: ควี โอฟฟิเชีย คอมโมโด แมกนา เออ ควี อาลิควิป ดูอิส.
-    - label: ฉันสามารถเปลี่ยนแผนได้หรือไม่ในภายหลัง?
-      content: โดโลเร อิรุเร อุลลัมโก โดโลเร เอีย โอเคแคท แมกนา เอียสโมด โดโลเร คัลปา ลาโบเร.
-    - label: คุณมีนโยบายการคืนเงินหรือไม่?
-      content: ดูอิส มอลลิต โนสตรุด โวลุปเตท มอลลิต ลอเร็ม โดโลเร คอมโมโด เวเนียม อินซิดิเดนท์ เอียสโมด.
-    - label: คุณให้การสนับสนุนหรือไม่?
-      content: อาลิควา ซิท นิซี คอนเซคเวียด ปาริอาทูร์ ลอเร็ม มินิม อิรุเร ควี.
+    - label: ต้องการยกเลิกการใช้งานต้องทำอย่างไร?
+      content: ท่านสามารถติดต่อเจ้าหน้าที่ผ่านช่องทางการติดต่อของเราเพื่อดำเนินการยกเลิกการใช้งานได้ โดยแจ้งล่วงหน้าอย่างน้อย 30 วัน
+    - label: ทดลองใช้งานฟรีทำงานอย่างไร?
+      content: เราให้ท่านทดลองใช้งานระบบได้ฟรี 30 วัน พร้อมฟีเจอร์การใช้งานครบถ้วน ไม่มีค่าใช้จ่ายแอบแฝง
+    - label: สามารถเปลี่ยนแผนการใช้งานภายหลังได้หรือไม่?
+      content: สามารถเปลี่ยนแผนการใช้งานได้ตลอดเวลา โดยค่าบริการจะปรับตามแผนใหม่ในรอบบิลถัดไป
+    - label: มีนโยบายคืนเงินอย่างไร?
+      content: เรามีนโยบายคืนเงินภายใน 14 วันหากท่านไม่พึงพอใจกับการใช้งาน โดยไม่มีค่าใช้จ่ายใดๆ
+    - label: มีบริการช่วยเหลือหรือไม่?
+      content: เรามีทีมสนับสนุนพร้อมให้ความช่วยเหลือตลอด 24 ชั่วโมง ผ่านช่องทางโทรศัพท์ อีเมล และแชท
 Document:
-  headline: "เอกสาร"
-  title: "เอกสารสำคัญ"
-  description: "เอกสารสำหรับผู้ป่วยและบุคลากรทางการแพทย์"
+  headline: เอกสาร
+  title: คู่มือการใช้งานระบบ
+  description: เอกสารและแบบฟอร์มที่จะช่วยคุณเริ่มต้นใช้งานระบบ
   items:
-    - documentName: "แบบฟอร์มลงทะเบียนผู้ป่วย"
-      lastUpdated: "2024-03-15T00:00:00Z"
-      fileType: "PDF"
-      fileSize: "250 KB"
-      downloadUrl: "/documents/patient-registration.pdf"
-      previewUrl: "/preview/patient-registration.pdf"
-    - documentName: "แบบฟอร์มขอประวัติการรักษา"
-      lastUpdated: "2024-03-14T00:00:00Z"
-      fileType: "DOCX"
-      fileSize: "180 KB"
-      downloadUrl: "/documents/medical-history.docx"
-      previewUrl: "/preview/medical-history.pdf"
-    - documentName: "หนังสือให้ความยินยอมการรักษา"
-      lastUpdated: "2024-03-13T00:00:00Z"
-      fileType: "PDF"
-      fileSize: "320 KB"
-      downloadUrl: "/documents/consent.pdf"
-      previewUrl: "/preview/consent.pdf"
+    - documentName: แบบฟอร์มลงทะเบียนผู้ป่วย
+      lastUpdated: 2024-03-15
+      fileType: PDF
+      fileSize: 250 KB
+      downloadUrl: /documents/patient-registration.pdf
+      previewUrl: /preview/patient-registration.pdf
+    - documentName: แบบฟอร์มขอประวัติการรักษา
+      lastUpdated: 2024-03-14
+      fileType: DOCX
+      fileSize: 180 KB
+      downloadUrl: /documents/medical-history.docx
+      previewUrl: /preview/medical-history.pdf
+    - documentName: แบบฟอร์มความยินยอม
+      lastUpdated: 2024-03-13
+      fileType: PDF
+      fileSize: 320 KB
+      downloadUrl: /documents/consent.pdf
+      previewUrl: /preview/consent.pdf
+contact:
+  title: ติดต่อเรา
+  description: หากคุณมีคำถามหรือต้องการความช่วยเหลือ เรายินดีให้บริการ
+  info:
+    - type: email
+      label: อีเมล
+      value: admin@laoslims.com
+      icon: i-heroicons-envelope
+    - type: whatsapp
+      label: วอตส์แอป
+      value: +66 (0) 6-2848-5995
+      icon: i-heroicons-phone
+Video:
+  headline: วิดีโอแนะนำการใช้งาน
+  title: วิธีการใช้งานระบบ LAOS LIMS
+  description: รับชมวิดีโอสอนการใช้งานระบบเพื่อเรียนรู้วิธีการใช้งานระบบอย่างมีประสิทธิภาพ
+  items:
+    - title: เริ่มต้นใช้งาน LAOS LIMS
+      description: เรียนรู้การใช้งานพื้นฐานของระบบ LAOS LIMS
+      thumbnail: "/images/nexlab.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "5:30"
+      date: "20-03-2567"
+      isPlaying: false
+    - title: การลงทะเบียนผู้ป่วย
+      description: คู่มือการลงทะเบียนผู้ป่วยแบบทีละขั้นตอน
+      thumbnail: "/images/pms.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "4:15"
+      date: "19-03-2567"
+      isPlaying: false
+    - title: การจัดการผลตรวจทางห้องปฏิบัติการ
+      description: วิธีการจัดการและประมวลผลการตรวจทางห้องปฏิบัติการ
+      thumbnail: "/images/patient.jpg"
+      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      duration: "6:45"
+      date: "18-03-2567"
+      isPlaying: false
