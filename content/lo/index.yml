@@ -183,21 +183,21 @@ Video:
     - title: ເລີ່ມຕົ້ນໃຊ້ງານ LAOS LIMS
       description: ຮຽນຮູ້ການໃຊ້ງານພື້ນຖານຂອງລະບົບ LAOS LIMS
       thumbnail: "/images/nexlab.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      videoUrl: /videos/pms.mp4
       duration: "5:30"
       date: "20-03-2567"
       isPlaying: false
     - title: ການລົງທະບຽນຄົນເຈັບ
       description: ຄູ່ມືການລົງທະບຽນຄົນເຈັບແບບທີລະຂັ້ນຕອນ
       thumbnail: "/images/pms.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "4:15"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "19-03-2567"
       isPlaying: false
     - title: ການຈັດການຜົນກວດທາງຫ້ອງວິເຄາະ
       description: ວິທີການຈັດການແລະປະມວນຜົນການກວດທາງຫ້ອງວິເຄາະ
       thumbnail: "/images/patient.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "6:45"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "18-03-2567"
       isPlaying: false

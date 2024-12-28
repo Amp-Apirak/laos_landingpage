@@ -7,18 +7,41 @@ const { data: page } = await useAsyncData("index", () =>
   queryContent(`${locale.value}/`).findOne()
 );
 
-// เพิ่ม state สำหรับจัดการการเล่นวิดีโอ
-const playingVideos = ref(new Set());
+// เพิ่ม ref สำหรับจัดการสถานะการเล่นวิดีโอ
+const playingVideos = ref<Set<number>>(new Set());
 
-// เพิ่มฟังก์ชันสำหรับควบคุมการเล่นวิดีโอ
+// เพิ่ม ref สำหรับเก็บ references ของ video elements
+const videoRefs = ref<HTMLVideoElement[]>([]);
+
+// ฟังก์ชันสำหรับสลับสถานะการเล่นวิดีโอ
 const toggleVideo = (index: number) => {
-  if (playingVideos.value.has(index)) {
-    playingVideos.value.delete(index);
+  const newPlayingVideos = new Set(playingVideos.value);
+  if (newPlayingVideos.has(index)) {
+    newPlayingVideos.delete(index);
   } else {
-    playingVideos.value.add(index);
+    // หยุดวิดีโอที่กำลังเล่นอื่นๆ
+    newPlayingVideos.clear();
+    newPlayingVideos.add(index);
+  }
+  playingVideos.value = newPlayingVideos;
+};
+
+// ฟังก์ชันสำหรับเล่นวิดีโอ
+const playVideo = (index: number) => {
+  const video = videoRefs.value[index];
+  if (video) {
+    video.play();
   }
 };
 
+// ฟังก์ชันสำหรับหยุดวิดีโอ
+const stopVideo = (index: number) => {
+  const video = videoRefs.value[index];
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+};
 
 // ตั้งค่า SEO เมตาโดยใช้ useSeoMeta เพื่อเพิ่มข้อมูล SEO ในหน้าเว็บ
 useSeoMeta({
@@ -319,17 +342,25 @@ useSeoMeta({
             :key="index"
             class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
           >
-            <!-- Video Thumbnail Container -->
+            <!-- Video Container -->
             <div class="relative aspect-video w-full">
               <!-- Thumbnail Image -->
               <img
+                v-if="!playingVideos.has(index)"
                 :src="video.thumbnail"
                 :alt="video.title"
                 class="w-full h-full object-cover"
               />
-              <!-- Play Button Overlay -->
+
+              <!-- Play Button -->
               <button
-                @click="video.isPlaying = true"
+                v-if="!playingVideos.has(index)"
+                @click="
+                  () => {
+                    toggleVideo(index);
+                    playVideo(index);
+                  }
+                "
                 class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-50 transition-opacity"
               >
                 <UIcon
@@ -337,24 +368,39 @@ useSeoMeta({
                   class="w-16 h-16 text-white"
                 />
               </button>
-              <!-- Video Player (shows when isPlaying is true) -->
-              <div v-if="video.isPlaying" class="absolute inset-0 bg-black">
-                <iframe
-                  :src="video.embedUrl"
-                  class="w-full h-full"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <!-- Close Button -->
-                <button
-                  @click="video.isPlaying = false"
-                  class="absolute top-4 right-4 text-white hover:text-gray-300"
-                >
-                  <UIcon name="i-heroicons-x-mark" class="w-6 h-6" />
-                </button>
-              </div>
+
+              <!-- Video Player -->
+              <video
+                v-if="playingVideos.has(index)"
+                :ref="el => { if(el) videoRefs[index] = el as HTMLVideoElement }"
+                :src="video.videoUrl"
+                class="w-full h-full"
+                controls
+                @ended="
+                  () => {
+                    toggleVideo(index);
+                    stopVideo(index);
+                  }
+                "
+              >
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Close Button -->
+              <button
+                v-if="playingVideos.has(index)"
+                @click="
+                  () => {
+                    toggleVideo(index);
+                    stopVideo(index);
+                  }
+                "
+                class="absolute top-4 right-4 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70"
+              >
+                <UIcon name="i-heroicons-x-mark" class="w-6 h-6" />
+              </button>
             </div>
+
             <!-- Video Info -->
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">

@@ -183,21 +183,21 @@ Video:
     - title: Getting Started with LAOS LIMS
       description: Learn the basics of using LAOS LIMS system
       thumbnail: "/images/nexlab.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      videoUrl: /videos/pms.mp4
       duration: "5:30"
       date: "2024-03-20"
       isPlaying: false
     - title: Patient Registration Tutorial
       description: Step-by-step guide for patient registration
       thumbnail: "/images/pms.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "4:15"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "2024-03-19"
       isPlaying: false
     - title: Laboratory Results Management
       description: How to manage and process laboratory results
       thumbnail: "/images/patient.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "6:45"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "2024-03-18"
       isPlaying: false

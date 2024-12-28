@@ -183,21 +183,21 @@ Video:
     - title: เริ่มต้นใช้งาน LAOS LIMS
       description: เรียนรู้การใช้งานพื้นฐานของระบบ LAOS LIMS
       thumbnail: "/images/nexlab.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
+      videoUrl: /videos/pms.mp4
       duration: "5:30"
       date: "20-03-2567"
       isPlaying: false
     - title: การลงทะเบียนผู้ป่วย
       description: คู่มือการลงทะเบียนผู้ป่วยแบบทีละขั้นตอน
       thumbnail: "/images/pms.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "4:15"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "19-03-2567"
       isPlaying: false
     - title: การจัดการผลตรวจทางห้องปฏิบัติการ
       description: วิธีการจัดการและประมวลผลการตรวจทางห้องปฏิบัติการ
       thumbnail: "/images/patient.jpg"
-      embedUrl: "https://www.youtube.com/embed/JriL0FDlqRU"
-      duration: "6:45"
+      videoUrl: /videos/pms.mp4
+      duration: "5:30"
       date: "18-03-2567"
       isPlaying: false

@@ -53,6 +53,7 @@ watch(locale, (newLocale) => {
       document.querySelector("#about") ?? undefined,
       document.querySelector("#documents") ?? undefined,
       document.querySelector("#faq") ?? undefined,
+      document.querySelector("#contact") ?? undefined,
     ].filter(Boolean)
   ); // ลบค่า null หรือ undefined ออก
 });
@@ -93,6 +94,12 @@ const links = computed(() => [
     to: "#faq",
     icon: "i-heroicons-question-mark-circle",
     active: activeHeadings.value.includes("faq"),
+  },
+  {
+    label: t("contact"),
+    to: "#contact",
+    icon: "i-heroicons-chat",
+    active: activeHeadings.value.includes("contact"),
   },
 ]);
 
